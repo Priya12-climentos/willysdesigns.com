@@ -35,211 +35,211 @@ document.addEventListener("DOMContentLoaded", function () {
                                             <div class="navigation-top">
                                                 <div class="wrap">
                        
-<nav id="site-navigation"
-     class="main-navigation pbmit-navbar pbmit-main-active-color-globalcolor pbmit-dropdown-active-color-globalcolor"
-     aria-label="Top Menu">
+                                                    <nav id="site-navigation"
+                                                        class="main-navigation pbmit-navbar pbmit-main-active-color-globalcolor pbmit-dropdown-active-color-globalcolor"
+                                                        aria-label="Top Menu">
 
-    <div class="menu-main-menu-container">
+                                                        <div class="menu-main-menu-container">
 
-        <ul id="pbmit-top-menu" class="menu">
+                                                            <ul id="pbmit-top-menu" class="menu">
 
-            <!-- HOME -->
-            <li id="menu-item-298"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-298">
+                                                                <!-- HOME -->
+                                                                <li id="menu-item-298"
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-298">
 
-                <a href="/index.html">
-                    Home
-                </a>
+                                                                    <a href="/index.html">
+                                                                        Home
+                                                                    </a>
 
-            </li>
+                                                                </li>
 
 
-            <!-- ABOUT US -->
-            <li id="menu-item-299"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299">
+                                                                <!-- ABOUT US -->
+                                                                <li id="menu-item-299"
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-299">
 
-                <a href="/pages/about-us.html">
-                    About Us
-                </a>
+                                                                    <a href="/pages/about-us.html">
+                                                                        About Us
+                                                                    </a>
 
-            </li>
+                                                                </li>
 
 
-            <!-- SERVICES -->
-            <li id="menu-item-301"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-301">
+                                                                <!-- SERVICES -->
+                                                                <li id="menu-item-301"
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-301">
 
-                <a href="/pages/services.html">
-                    Services
-                </a>
+                                                                    <a href="/pages/services.html">
+                                                                        Services
+                                                                    </a>
 
-            </li>
+                                                                </li>
 
 
-            <!-- PORTFOLIO -->
-            <li id="menu-item-300"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300">
+                                                                <!-- PORTFOLIO -->
+                                                                <li id="menu-item-300"
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300">
 
-                <a href="/pages/Portfolio.html">
-                    Portfolio
-                </a>
+                                                                    <a href="/pages/Portfolio.html">
+                                                                        Portfolio
+                                                                    </a>
 
-            </li>
+                                                                </li>
 
 
-            <!-- BLOGS -->
-            <li id="menu-item-285"
-                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-285">
+                                                                <!-- BLOGS -->
+                                                                <li id="menu-item-285"
+                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-285">
 
-                <a href="/pages/Blogs.html">
-                    Blogs
-                </a>
+                                                                    <a href="/pages/Blogs.html">
+                                                                        Blogs
+                                                                    </a>
 
-                <ul class="sub-menu">
+                                                                    <ul class="sub-menu">
 
-                    <!-- BLOG MASONRY VIEW -->
-                    <li id="menu-item-286"
-                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-286">
+                                                                        <!-- BLOG MASONRY VIEW -->
+                                                                        <li id="menu-item-286"
+                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-286">
 
-                        <a href="/pages/Blogs.html">
-                            Blog Masonry View
-                        </a>
+                                                                            <a href="/pages/Blogs.html">
+                                                                                Blog Masonry View
+                                                                            </a>
 
-                        <ul class="sub-menu">
+                                                                            <ul class="sub-menu">
 
-                            <li id="menu-item-292"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292">
+                                                                                <li id="menu-item-292"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292">
 
-                                <a href="/pages/blog-m-grid-col-2.html">
-                                    Grid Col 2
-                                </a>
+                                                                                    <a href="/pages/blog-m-grid-col-2.html">
+                                                                                        Grid Col 2
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-297"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
+                                                                                <li id="menu-item-297"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
 
-                                <a href="/pages/blog-m-grid-col-3.html">
-                                    Grid Col 3
-                                </a>
+                                                                                    <a href="/pages/blog-m-grid-col-3.html">
+                                                                                        Grid Col 3
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-291"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291">
+                                                                                <li id="menu-item-291"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291">
 
-                                <a href="/pages/blog-m-grid-col-4.html">
-                                    Grid Col 4
-                                </a>
+                                                                                    <a href="/pages/blog-m-grid-col-4.html">
+                                                                                        Grid Col 4
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-290"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290">
+                                                                                <li id="menu-item-290"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290">
 
-                                <a href="/pages/blog-masonry-wide.html">
-                                    Masonry Wide
-                                </a>
+                                                                                    <a href="/pages/blog-masonry-wide.html">
+                                                                                        Masonry Wide
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                        </ul>
+                                                                            </ul>
 
-                    </li>
+                                                                        </li>
 
 
-                    <!-- BLOG GRID VIEW -->
-                    <li id="menu-item-287"
-                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-287">
+                                                                        <!-- BLOG GRID VIEW -->
+                                                                        <li id="menu-item-287"
+                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-287">
 
-                        <a href="/pages/Blogs.html">
-                            Blog Grid View
-                        </a>
+                                                                            <a href="/pages/Blogs.html">
+                                                                                Blog Grid View
+                                                                            </a>
 
-                        <ul class="sub-menu">
+                                                                            <ul class="sub-menu">
 
-                            <li id="menu-item-296"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
+                                                                                <li id="menu-item-296"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
 
-                                <a href="/pages/blog-grid-col-2.html">
-                                    Grid Col 2
-                                </a>
+                                                                                    <a href="/pages/blog-grid-col-2.html">
+                                                                                        Grid Col 2
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-295"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
+                                                                                <li id="menu-item-295"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
 
-                                <a href="/pages/blog-grid-col-3.html">
-                                    Grid Col 3
-                                </a>
+                                                                                    <a href="/pages/blog-grid-col-3.html">
+                                                                                        Grid Col 3
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-294"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
+                                                                                <li id="menu-item-294"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
 
-                                <a href="/pages/blog-grid-col-4.html">
-                                    Grid Col 4
-                                </a>
+                                                                                    <a href="/pages/blog-grid-col-4.html">
+                                                                                        Grid Col 4
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                            <li id="menu-item-293"
-                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
+                                                                                <li id="menu-item-293"
+                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
 
-                                <a href="/pages/blog-sortable-grid-view.html">
-                                    Sortable Grid View
-                                </a>
+                                                                                    <a href="/pages/blog-sortable-grid-view.html">
+                                                                                        Sortable Grid View
+                                                                                    </a>
 
-                            </li>
+                                                                                </li>
 
-                        </ul>
+                                                                            </ul>
 
-                    </li>
+                                                                        </li>
 
 
-                    <!-- BLOG CLASSIC -->
-                    <li id="menu-item-288"
-                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288">
+                                                                        <!-- BLOG CLASSIC -->
+                                                                        <li id="menu-item-288"
+                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288">
 
-                        <a href="/pages/blog-classic.html">
-                            Blog Classic
-                        </a>
+                                                                            <a href="/pages/blog-classic.html">
+                                                                                Blog Classic
+                                                                            </a>
 
-                    </li>
+                                                                        </li>
 
 
-                    <!-- BLOG SINGLE -->
-                    <li id="menu-item-289"
-                        class="menu-item menu-item-type-post_type menu-item-object-post menu-item-289">
+                                                                        <!-- BLOG SINGLE -->
+                                                                        <li id="menu-item-289"
+                                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-289">
 
-                        <a href="/pages/blog-single.html">
-                            Blog Single Details
-                        </a>
+                                                                            <a href="/pages/blog-single.html">
+                                                                                Blog Single Details
+                                                                            </a>
 
-                    </li>
+                                                                        </li>
 
-                </ul>
+                                                                    </ul>
 
-            </li>
+                                                                </li>
 
 
-            <!-- CONTACT US -->
-            <li id="menu-item-284"
-                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284">
+                                                                <!-- CONTACT US -->
+                                                                <li id="menu-item-284"
+                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284">
 
-                <a href="/pages/contact-us.html">
-                    Contact Us
-                </a>
+                                                                    <a href="/pages/contact-us.html">
+                                                                        Contact Us
+                                                                    </a>
 
-            </li>
+                                                                </li>
 
-        </ul>
+                                                            </ul>
 
-    </div>
+                                                        </div>
 
-</nav>
+                                                    </nav>
  
 
                                                     <!-- #site-navigation -->
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <div class="pbmit-right-box d-flex align-items-center">
                                         <div class="pbmit-header-button">
                                             <a href="tel:+1(212)%20255-511">
-                                                <span class="pbmit-header-button-text-1">+1(212) 255-511</span>
+                                                <span class="pbmit-header-button-text-1">+91 63603 53223</span>
                                             </a>
                                         </div>
                                         <div class="pbmit-button-box-second">
