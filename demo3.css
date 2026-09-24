@@ -1,0 +1,63 @@
+/* Roboto */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(assets/fonts/roboto/roboto-1.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(assets/fonts/roboto/roboto-2.woff2) format('woff2');
+}
+
+/* Space Grotesk */
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(assets/fonts/space-grotesk/space-grotesk.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(assets/fonts/space-grotesk/SpaceGrotesk.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(assets/fonts/space-grotesk/SpaceGrotesk.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(assets/fonts/space-grotesk/SpaceGrotesk.woff2) format('woff2');
+}
+
+/* pbminfotech-base-icons (icon font used across the theme's UI icons) */
+
+@font-face {
+    font-family: 'pbminfotech-base-icons';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url(assets/fonts/pbminfotech-icons/pbminfotech-base-icons.ttf) format('truetype'),
+         url(assets/fonts/pbminfotech-icons/pbminfotech-base-icons.woff) format('woff'),
+         url(assets/fonts/pbminfotech-icons/pbminfotech-base-icons.woff2) format('woff2');
+}
