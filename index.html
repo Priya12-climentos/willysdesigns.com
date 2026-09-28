@@ -80,7 +80,22 @@
             color: #fff;
             text-decoration: none
         }
+        /* Fix the swiper container height and rounded corners */
+        .swiper-static-slide-images .swiper-container,
+        .swiper-static-slide-images .swiper-slide {
+            height: 520px; /* Adjust height to match your left-hand text column */
+            border-radius: 20px;
+            overflow: hidden;
+        }
 
+        /* Ensure the image fills the container cleanly without distortion */
+        .swiper-static-slide-images .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
         /*# sourceURL=/wp-includes/css/classic-themes.min.css */
     </style>
     <style id="global-styles-inline-css">
@@ -3657,17 +3672,17 @@
                                                                                         <div class="swiper-wrapper">
                                                                                             <div class="swiper-slide">
                                                                                                 <img decoding="async"
-                                                                                                    src="https://xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/09/sbox-img-01.jpg"
+                                                                                                    src="/assets/img/index_imgs/P-7.jpeg"
                                                                                                     alt="We visit you at home" />
                                                                                             </div>
                                                                                             <div class="swiper-slide">
                                                                                                 <img decoding="async"
-                                                                                                    src="https://xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/09/sbox-img-02.jpg"
+                                                                                                    src="/assets/img/index_imgs/P-8.jpeg"
                                                                                                     alt="Preliminary computer designs" />
                                                                                             </div>
                                                                                             <div class="swiper-slide">
                                                                                                 <img decoding="async"
-                                                                                                    src="https://xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/09/sbox-img-03.jpg"
+                                                                                                    src="/assets/img/index_imgs/P-9.jpeg"
                                                                                                     alt="Work in progress" />
                                                                                             </div>
                                                                                             <div class="swiper-slide">
