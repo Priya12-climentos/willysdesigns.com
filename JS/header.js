@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <div class="site-branding pbmit-logo-area">
                                             <div class="wrap">
                                                 <h1 class="site-title">
-                                                    <a href="https://xinterio-demo.pbminfotech.com/demo12/" rel="home">
+                                                    <a href="#" rel="home">
                                                         <span class="site-title-text">Xinterio Demo12 - Interior Design WordPress Theme</span>
                                                         <img class="pbmit-main-logo" src="https://xinterio-demo.pbminfotech.com/demo12/wp-content/uploads/sites/19/2026/01/logo-icon.svg" alt="Xinterio Demo12" title="Xinterio Demo12"/>
                                                         <img class="pbmit-sticky-logo" src="https://xinterio-demo.pbminfotech.com/demo12/wp-content/uploads/sites/19/2026/01/logo-icon.svg" alt="Xinterio Demo12" title="Xinterio Demo12"/>
@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                         </div>
                                         <div class="pbmit-button-box-second">
                                             <div class="pbmit-header-button2">
-                                                <a href="https://xinterio-demo.pbminfotech.com/demo12/contact-us/" class="pbmit-header-button">
+                                                <a href="/pages/contact-us" class="pbmit-header-button">
                                                     <span class="pbmit-header-button-wrapper">
                                                         <span class="pbmit-header-button2-text">Book Consult</span>
                                                     </span>
