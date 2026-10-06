@@ -163,330 +163,201 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
      * Footer HTML
      */
-    footerContainer.innerHTML = `
+   footerContainer.innerHTML = `<footer id="colophon"
+    class="pbmit-footer-section site-footer pbmit-footer-style-5 pbmit-text-color-white pbmit-bg-color-secondarycolor pbmit-footer-menu-yes pbmit-footer-widget-yes">
 
-        <footer
-            id="colophon"
-            class="pbmit-footer-section site-footer pbmit-footer-style-3 pbmit-text-color-white pbmit-bg-color-secondarycolor pbmit-footer-menu-yes pbmit-footer-widget-yes"
-        >
+    <div class="pbmit-widget-copyright-wrap">
 
-            <!-- ==========================================
-                 FOOTER MAIN AREA
-                 ========================================== -->
+        <!-- Main Footer -->
+        <div class="pbmit-footer-section footer-wrap pbmit-footer-widget-area">
+            <div class="container">
+                <div class="row">
 
-            <div class="pbmit-footer-section footer-wrap pbmit-footer-widget-area">
+                    <!-- Logo & Description -->
+                    <div class="pbmit-footer-widget pbmit-footer-widget-col-1 col-md-4">
+                        <aside class="widget widget_text">
+                            <div class="textwidget">
 
-                <div class="container">
+                                <a href="https://tos.climentos.com/index.html">
+                                    <img src="/assets/img/main/image.png"
+                                         alt="Climentos Logo"
+                                         style="width:150px;height:auto;margin-bottom:20px;">
+                                </a>
 
-                    <div class="row">
+                                <p>
+                                    Turn your coding skills into AI expertise.
+                                    Learn, build, and launch real AI projects
+                                    with expert mentors in just 120 days.
+                                </p>
 
-                        <!-- LEFT MENU -->
-                        <div class="pbmit-footer-widget pbmit-footer-widget-col-1 col-md-4">
+                            </div>
+                        </aside>
+                    </div>
 
-                            <aside
-                                id="nav_menu-1"
-                                class="pbmit-two-column-menu widget widget_nav_menu"
-                            >
+                    <!-- Quick Links -->
+                    <div class="pbmit-footer-widget pbmit-footer-widget-col-2 col-md-2">
+                        <aside class="widget">
+                            <h5 class="#">Quick Links</h5>
 
-                                <div class="menu-left-menu-container">
+                            <ul class="menu">
+                                <li>
+                                    <a href="/index.html">Home</a>
+                                </li>
 
-                                    <ul
-                                        id="menu-left-menu"
-                                        class="menu"
-                                    >
+                                <li>
+                                    <a href="/pages/about-us.html">About Us</a>
+                                </li>
 
-                                        ${createMenu(leftMenu, "left-menu")}
+                                <li>
+                                    <a href="/pages/services.html">Services</a>
+                                </li>
 
-                                    </ul>
+                                <li>
+                                    <a href="/pages/portfolio.html">Portfolio</a>
+                                </li>
 
-                                </div>
+                                <li>
+                                    <a href="/pages/placements.html">Placements</a>
+                                </li>
 
-                            </aside>
+                                <li>
+                                    <a href="/pages/contactUs.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
 
-                        </div>
+                    <!-- Courses -->
+                    <div class="pbmit-footer-widget pbmit-footer-widget-col-3 col-md-3">
+                        <aside class="widget">
+                            <h5 class="#">Courses</h5>
 
-                        <!-- FOOTER LOGO -->
-                        <div class="pbmit-footer-widget pbmit-footer-widget-col-2 col-md-4">
+                            <ul class="menu">
+                                <li>
+                                    <a href="https://tos.climentos.com/pages/course-details.html?c=java">
+                                        Java + AI
+                                    </a>
+                                </li>
 
-                            <aside
-                                id="text-2"
-                                class="widget widget_text"
-                            >
+                                <li>
+                                    <a href="https://tos.climentos.com/pages/course-details.html?c=python">
+                                        Python + AI
+                                    </a>
+                                </li>
 
-                                <div class="textwidget">
+                                <li>
+                                    <a href="https://tos.climentos.com/pages/course-details.html?c=data">
+                                        Digital Marketing
+                                    </a>
+                                </li>
 
-                                    <div class="pbmit-footer-logo">
+                                <li>
+                                    <a href="https://tos.climentos.com/pages/course-details.html?c=data">
+                                        Clinical Research Specialist
+                                    </a>
+                                </li>
 
-                                        <img
-                                            decoding="async"
-                                            class="pbmit-main-logo"
-                                            src="${siteBase}/wp-content/uploads/sites/10/2024/06/favicon.svg"
-                                            alt="Xinterio Demo4"
-                                            title="Xinterio Demo4"
-                                        >
+                                <li>
+                                    <a href="https://tos.climentos.com/pages/courses.html">
+                                        All Courses
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
 
-                                    </div>
+                    <!-- Contact / Stay in loop -->
+                    <div class="pbmit-footer-widget pbmit-footer-widget-col-4 col-md-3">
+                        <aside class="widget">
+                            <h5 class="#">Stay in the Loop</h5>
 
-                                </div>
+                            <p>
+                                Placement drives, free workshops and hiring news
+                                — once a week, no spam.
+                            </p>
 
-                            </aside>
+                            <p>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+919741739223">
+                                    +91 97417 39223
+                                </a>
+                            </p>
 
-                        </div>
+                            <p>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:support@climentos.com">
+                                    support@climentos.com
+                                </a>
+                            </p>
 
-                        <!-- RIGHT MENU -->
-                        <div class="pbmit-footer-widget pbmit-footer-widget-col-3 col-md-4">
-
-                            <aside
-                                id="nav_menu-2"
-                                class="pbmit-two-column-menu widget widget_nav_menu"
-                            >
-
-                                <div class="menu-right-menu-container">
-
-                                    <ul
-                                        id="menu-right-menu"
-                                        class="menu"
-                                    >
-
-                                        ${createMenu(rightMenu, "right-menu")}
-
-                                    </ul>
-
-                                </div>
-
-                            </aside>
-
-                        </div>
-
+                        </aside>
                     </div>
 
                 </div>
-
             </div>
-
-
-            <!-- ==========================================
-                 INSTAGRAM AREA
-                 ========================================== -->
-
-            <div class="pbmit-footer-instagram-area">
-
-                <div class="container">
-
-                    <div class="row">
-
-                        <div class="pbmit-footer-instagram-wrapper">
-
-                            <div
-                                id="sb_instagram"
-                                class="sbi sbi_mob_col_1 sbi_tab_col_3 sbi_col_6 sbi_width_resp"
-                                style="padding-bottom: 10px;"
-                                data-feedid="*1"
-                                data-res="auto"
-                                data-cols="6"
-                                data-colsmobile="1"
-                                data-colstablet="3"
-                                data-num="20"
-                                data-nummobile="20"
-                                data-item-padding="5"
-                                data-imageaspectratio="1:1"
-                            >
-
-                                <div
-                                    id="sbi_images"
-                                    style="gap: 10px;"
-                                >
-
-                                    ${createInstagramPosts()}
-
-                                </div>
-
-                                <div id="sbi_load"></div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==========================================
-                 CONTACT + SOCIAL AREA
-                 ========================================== -->
-
-            <div
-                class="pbmit-footer-section pbmit-footer-big-area-wrapper pbmit-bg-color-transparent"
-            >
-
-                <div class="footer-wrap pbmit-footer-big-area">
-
-                    <div class="container">
-
-                        <div class="row">
-
-                            <!-- EMAIL + PHONE -->
-                            <div class="col-md-4 col-sm-12 pbmit-footer-left">
-
-                                <span class="pbmit-email-text">
-                                    hello@example.com
-                                </span>
-
-                                <span class="pbmit-phone-number">
-                                    +79 2589 63598
-                                </span>
-
-                            </div>
-
-
-                            <!-- ADDRESS -->
-                            <div class="col-md-4 col-sm-12 pbmit-footer-right">
-
-                                <span class="pbmit-address">
-                                    Chicago HQ Estica cop,
-                                    <br>
-                                    Macomb, MI 48042
-                                </span>
-
-                            </div>
-
-
-                            <!-- SOCIAL -->
-                            <div class="col-md-4 col-sm-12 pbmit-footer-right-social">
-
-                                <ul class="pbmit-social-links">
-
-                                    <!-- Facebook -->
-                                    <li class="pbmit-social-li pbmit-social-facebook">
-
-                                        <a
-                                            title="Facebook"
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-
-                                            <span>
-                                                <i class="fa-brands fa-facebook-f"></i>
-                                            </span>
-
-                                        </a>
-
-                                    </li>
-
-
-                                    <!-- X / Twitter -->
-                                    <li class="pbmit-social-li pbmit-social-twitter">
-
-                                        <a
-                                            title="X / Twitter"
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-
-                                            <span>
-                                                <i class="fa-brands fa-x-twitter"></i>
-                                            </span>
-
-                                        </a>
-
-                                    </li>
-
-
-                                    <!-- LinkedIn -->
-                                    <li class="pbmit-social-li pbmit-social-linkedin">
-
-                                        <a
-                                            title="LinkedIn"
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-
-                                            <span>
-                                                <i class="fa-brands fa-linkedin-in"></i>
-                                            </span>
-
-                                        </a>
-
-                                    </li>
-
-
-                                    <!-- Instagram -->
-                                    <li class="pbmit-social-li pbmit-social-instagram">
-
-                                        <a
-                                            title="Instagram"
-                                            href="#"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-
-                                            <span>
-                                                <i class="fa-brands fa-instagram"></i>
-                                            </span>
-
-                                        </a>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- ==========================================
-                 COPYRIGHT
-                 ========================================== -->
-
-            <div
-                class="pbmit-footer-section pbmit-footer-text-area pbmit-bg-color-custom"
-            >
-
-                <div class="container">
+        </div>
+
+        <!-- Copyright -->
+        <div class="pbmit-footer-section pbmit-bg-color-custom">
+            <div class="container">
+                <div class="pbmit-footer-text-area-wrapper pbmit-footer-text-area">
 
                     <div class="pbmit-footer-text-inner">
-
                         <div class="row">
 
-                            <div class="col-md-12">
-
+                            <div class="col-md-6">
                                 <div class="pbmit-footer-copyright-text-area">
-
-                                    Copyright © ${currentYear}
-
-                                    <a href="${siteBase}/">
-                                        PBM Infotech
+                                    Copyright © ${new Date().getFullYear()}
+                                    <a href="https://tos.climentos.com/index.html">
+                                        Climentos Technologies Pvt Ltd
                                     </a>
-
                                     All Rights Reserved.
-
                                 </div>
+                            </div>
 
+                            <div class="col-md-6">
+                                <div class="pbmit-footer-menu-area">
+                                    <div class="menu-footer-menu-container">
+                                        <ul class="pbmit-footer-menu">
+
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Terms and Conditions
+                                                </a>
+                                            </li>
+
+                                            <li class="menu-item">
+                                                <a href="#">
+                                                    Privacy Policy
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
-
                     </div>
 
                 </div>
-
             </div>
+        </div>
 
-        </footer>
+    </div>
 
-    `;
+    <!-- Big Footer Title -->
+    <div class="pbmit-footer-section pbmit-footer-big-area-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 pbmit-footer-big-title">
+                    <h3 class="pbmit-footer-title-big">
+                        willys
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</footer>`;
 });

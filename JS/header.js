@@ -19,8 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
                                                 <h1 class="site-title">
                                                     <a href="#" rel="home">
                                                         <span class="site-title-text">Xinterio Demo12 - Interior Design WordPress Theme</span>
-                                                        <img class="pbmit-main-logo" src="https://xinterio-demo.pbminfotech.com/demo12/wp-content/uploads/sites/19/2026/01/logo-icon.svg" alt="Xinterio Demo12" title="Xinterio Demo12"/>
-                                                        <img class="pbmit-sticky-logo" src="https://xinterio-demo.pbminfotech.com/demo12/wp-content/uploads/sites/19/2026/01/logo-icon.svg" alt="Xinterio Demo12" title="Xinterio Demo12"/>
+                                                        <img class="#"
+                                                        src="/assets/img/main/image.png"
+                                                        alt="Logo"
+                                                        style="width:100%; height: auto;">
                                                     </a>
                                                 </h1>
                                                 <!-- Logo area -->
@@ -80,156 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
                                                                 <li id="menu-item-300"
                                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-300">
 
-                                                                    <a href="/pages/Portfolio.html">
+                                                                    <a href="/pages/portfolio.html">
                                                                         Portfolio
                                                                     </a>
 
                                                                 </li>
 
 
-                                                                <!-- BLOGS -->
-                                                                <li id="menu-item-285"
-                                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-285">
-
-                                                                    <a href="/pages/Blogs.html">
-                                                                        Blogs
-                                                                    </a>
-
-                                                                    <ul class="sub-menu">
-
-                                                                        <!-- BLOG MASONRY VIEW -->
-                                                                        <li id="menu-item-286"
-                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-286">
-
-                                                                            <a href="/pages/Blogs.html">
-                                                                                Blog Masonry View
-                                                                            </a>
-
-                                                                            <ul class="sub-menu">
-
-                                                                                <li id="menu-item-292"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292">
-
-                                                                                    <a href="/pages/blog-m-grid-col-2.html">
-                                                                                        Grid Col 2
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-297"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297">
-
-                                                                                    <a href="/pages/blog-m-grid-col-3.html">
-                                                                                        Grid Col 3
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-291"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291">
-
-                                                                                    <a href="/pages/blog-m-grid-col-4.html">
-                                                                                        Grid Col 4
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-290"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290">
-
-                                                                                    <a href="/pages/blog-masonry-wide.html">
-                                                                                        Masonry Wide
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                            </ul>
-
-                                                                        </li>
-
-
-                                                                        <!-- BLOG GRID VIEW -->
-                                                                        <li id="menu-item-287"
-                                                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-287">
-
-                                                                            <a href="/pages/Blogs.html">
-                                                                                Blog Grid View
-                                                                            </a>
-
-                                                                            <ul class="sub-menu">
-
-                                                                                <li id="menu-item-296"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-296">
-
-                                                                                    <a href="/pages/blog-grid-col-2.html">
-                                                                                        Grid Col 2
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-295"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295">
-
-                                                                                    <a href="/pages/blog-grid-col-3.html">
-                                                                                        Grid Col 3
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-294"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-294">
-
-                                                                                    <a href="/pages/blog-grid-col-4.html">
-                                                                                        Grid Col 4
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                                <li id="menu-item-293"
-                                                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293">
-
-                                                                                    <a href="/pages/blog-sortable-grid-view.html">
-                                                                                        Sortable Grid View
-                                                                                    </a>
-
-                                                                                </li>
-
-                                                                            </ul>
-
-                                                                        </li>
-
-
-                                                                        <!-- BLOG CLASSIC -->
-                                                                        <li id="menu-item-288"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288">
-
-                                                                            <a href="/pages/blog-classic.html">
-                                                                                Blog Classic
-                                                                            </a>
-
-                                                                        </li>
-
-
-                                                                        <!-- BLOG SINGLE -->
-                                                                        <li id="menu-item-289"
-                                                                            class="menu-item menu-item-type-post_type menu-item-object-post menu-item-289">
-
-                                                                            <a href="/pages/blog-single.html">
-                                                                                Blog Single Details
-                                                                            </a>
-
-                                                                        </li>
-
-                                                                    </ul>
-
-                                                                </li>
+                                                                
 
 
                                                                 <!-- CONTACT US -->
                                                                 <li id="menu-item-284"
                                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284">
 
-                                                                    <a href="/pages/contact-us.html">
+                                                                    <a href="/pages/contactUs.html">
                                                                         Contact Us
                                                                     </a>
 
