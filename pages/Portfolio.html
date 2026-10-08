@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>Grid Col 4 &#8211; Xinterio Demo4</title>
+    <title>Portfolio&#8211; WillysDesigns</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
@@ -44,6 +44,221 @@
     <link rel='stylesheet' id='ctf_styles-css'
         href='/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=2.7.0'
         media='all' />
+
+    <style>
+        :root {
+            --brand-brown: #423226;
+            /* Your exact sample brown */
+            --brand-brown-rgb: 66, 50, 38;
+            /* RGB for transparency */
+            --brand-gold: #cfa853;
+            /* Champagne gold */
+            --brand-gold-glow: rgba(207, 168, 83, 0.3);
+            --brand-cream: #faf7f2;
+            /* Warm ivory */
+            --brand-muted: #d8cec7;
+            /* Sand-tinted text */
+        }
+
+        /* Container */
+        .hero-glass {
+            position: relative;
+            width: 100%;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            overflow: hidden;
+            background-color: #423226;
+        }
+
+        /* Background Image */
+        .hero-glass__bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+        }
+
+        /* Backdrop dark brown shade for legibility */
+        .hero-glass__backdrop-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    rgba(66, 50, 38, 0.82) 0%,
+                    rgba(66, 50, 38, 0.5) 60%,
+                    rgba(66, 50, 38, 0.25) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Glass Wrapper */
+        .hero-glass__container {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            max-width: 620px;
+        }
+
+        /* Frosted Glass Card */
+        .glass-card {
+            background: rgba(66, 50, 38, 0.88) !important;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 3.2rem 2.8rem;
+            border-radius: 12px;
+            border: 1px solid rgba(207, 168, 83, 0.45);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+            color: #faf7f2 !important;
+        }
+
+        /* Header tags */
+        .glass-card__header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.25rem;
+        }
+
+        .gold-pill {
+            background: #cfa853 !important;
+            color: #1f140c !important;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .glass-category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #e5ded9 !important;
+        }
+
+        /* Headings */
+        .glass-card__title {
+            font-size: clamp(2.2rem, 3.8vw, 3.2rem) !important;
+            font-weight: 700 !important;
+            line-height: 1.15 !important;
+            margin: 0 0 1.2rem !important;
+            color: #ffffff !important;
+        }
+
+        .glass-card__title em {
+            display: block;
+            font-style: italic;
+            font-weight: 300;
+            color: #f3df95 !important;
+        }
+
+        .glass-card__text {
+            font-size: 1rem !important;
+            line-height: 1.65 !important;
+            color: #ded6cf !important;
+            margin: 0 0 2rem !important;
+            font-weight: 300;
+        }
+
+        /* Actions & Buttons */
+        .glass-card__actions {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            margin-bottom: 2.2rem;
+        }
+
+        /* Primary Gold Button & Clean Hover */
+        .glass-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            background: #cfa853 !important;
+            color: #1a1007 !important;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            border: 1px solid #cfa853;
+            box-shadow: 0 6px 18px rgba(207, 168, 83, 0.35);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .glass-btn-primary:hover {
+            background: #ffffff !important;
+            color: #1a1007 !important;
+            border-color: #ffffff !important;
+            box-shadow: 0 8px 24px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Secondary Ghost Button & Clean Hover */
+        .glass-btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 22px;
+            border: 1px solid rgba(250, 247, 242, 0.4) !important;
+            color: #faf7f2 !important;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            background: transparent !important;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .glass-btn-ghost:hover {
+            background: rgba(207, 168, 83, 0.18) !important;
+            border-color: #cfa853 !important;
+            color: #f3df95 !important;
+            transform: translateY(-2px);
+        }
+
+        /* Stats */
+        .glass-card__stats {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            padding-top: 1.75rem;
+            border-top: 1px solid rgba(207, 168, 83, 0.3);
+        }
+
+        .stat-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-col strong {
+            font-size: 1.3rem !important;
+            font-weight: 700;
+            color: #ffffff !important;
+        }
+
+        .stat-col span {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cfa853 !important;
+            margin-top: 3px;
+        }
+
+        .stat-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+
     <style id="wp-emoji-styles-inline-css">
         img.wp-smiley,
         img.emoji {
@@ -678,16 +893,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <meta name="generator"
         content="Powered by Slider Revolution 6.7.58 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <link rel="icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-32x32.png"
-        sizes="32x32" />
-    <link rel="icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-192x192.png"
-        sizes="192x192" />
-    <link rel="apple-touch-icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-180x180.png" />
-    <meta name="msapplication-TileImage"
-        content="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-270x270.png" />
+    <link rel="icon" href="../pic/favicon.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="../pic/favicon.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="../pic/favicon.png" />
+<meta name="msapplication-TileImage" content="../pic/favicon.png" />
     <script>
         window._tpt ??= {};
         window.SR7 ??= {};
@@ -1149,17 +1358,57 @@
         <div id="header-container"></div>
         <!-- #masthead -->
         <!-- ===== SERVICE HERO START ===== -->
-        <section class="service-hero">
-            <img src="../assets//vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-detail-01.jpg"
-                alt="Furniture and decor interior design" width="1920" height="700" fetchpriority="high" />
-            <div class="service-hero__overlay"></div>
-            <div class="service-hero__content">
-                <span class="service-hero__tag">Our Service</span>
-                <h1 class="service-hero__title">Furniture &amp; Decor</h1>
-                <p class="service-hero__text">
-                    Custom interior design that turns your space into something you love.
-                </p>
-                <a href="#content" class="service-hero__btn">Explore More</a>
+        <section class="hero-glass"
+            style="position: relative; width: 100%; min-height: 85vh; display: flex; align-items: center; padding: 0 8%; overflow: hidden; background-color: #423226;">
+
+            <!-- Direct Image Tag with Forced Geometry -->
+            <img class="hero-glass__bg" src="../photos/HERO.avif" alt="Bespoke furniture and interior collection"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 1; display: block;" />
+
+            <!-- Subtle Brown Tint Layer -->
+            <div class="hero-glass__backdrop-shade"
+                style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(66, 50, 38, 0.85) 0%, rgba(66, 50, 38, 0.5) 60%, rgba(66, 50, 38, 0.25) 100%); z-index: 2; pointer-events: none;">
+            </div>
+
+            <!-- Content Container -->
+            <div class="hero-glass__container" style="position: relative; z-index: 3; width: 100%; max-width: 620px;">
+                <div class="glass-card">
+                    <div class="glass-card__header">
+                        <span class="gold-pill">Portfolio &bull; 2026</span>
+                        <span class="glass-category">Bespoke Furnishings</span>
+                    </div>
+
+                    <h1 class="glass-card__title">
+                        Furniture &amp; Decor <em>Crafted in Form.</em>
+                    </h1>
+
+                    <p class="glass-card__text">
+                        Custom architectural interior design and hand-finished furnishings tailored to create enduring
+                        warmth and tactile balance.
+                    </p>
+
+                    <div class="glass-card__actions">
+                        <a href="/pages/services.html" class="glass-btn-primary">View Collection &rarr;</a>
+                        <a href="/pages//contactUs.html" class="glass-btn-ghost">Enquire Now</a>
+                    </div>
+
+                    <div class="glass-card__stats">
+                        <div class="stat-col">
+                            <strong>140+</strong>
+                            <span>Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-col">
+                            <strong>100%</strong>
+                            <span>Solid Walnut</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-col">
+                            <strong>Grade A</strong>
+                            <span>Italian Craft</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- ===== SERVICE HERO END ===== -->

@@ -17,13 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
                                         <div class="site-branding pbmit-logo-area">
                                             <div class="wrap">
                                                 <h1 class="site-title">
-                                                    <a href="#" rel="home">
-                                                        <span class="site-title-text">Xinterio Demo12 - Interior Design WordPress Theme</span>
-                                                        <img class="#"
-                                                        src="/assets/img/main/image.png"
-                                                        alt="Logo"
-                                                        style="width:100%; height: auto;">
-                                                    </a>
+                                                    <a href="javascript:void(0);" id="site-main-logo" rel="home">
+    <span class="site-title-text">Xinterio Demo12 - Interior Design WordPress Theme</span>
+    <img 
+        src="../assets/img/main/image.png" 
+        alt="Logo" 
+        style="width: 100%; height: auto; pointer-events: none;"
+    >
+</a>
                                                 </h1>
                                                 <!-- Logo area -->
                                             </div>
@@ -121,13 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
                                     <div class="pbmit-right-box d-flex align-items-center">
                                         <div class="pbmit-header-button">
-                                            <a href="tel:+1(212)%20255-511">
+                                            <a href="tel:+916360353223">
                                                 <span class="pbmit-header-button-text-1">+91 63603 53223</span>
                                             </a>
                                         </div>
                                         <div class="pbmit-button-box-second">
                                             <div class="pbmit-header-button2">
-                                                <a href="/pages/contact-us" class="pbmit-header-button">
+                                                <a href="/pages/contactUs.html" class="pbmit-header-button">
                                                     <span class="pbmit-header-button-wrapper">
                                                         <span class="pbmit-header-button2-text">Book Consult</span>
                                                     </span>
@@ -152,4 +153,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <!-- pbmit-header-overlay-end -->
             </header>`;
+    /* Highlight the menu item for the current page */
+    (function () {
+        // Normalise a path: "/" and "/index.html" are both "home"; strip trailing slash and .html
+        function normalise(path) {
+            path = path.split("?")[0].split("#")[0];
+            path = path.replace(/\/index\.html$/i, "/").replace(/\.html$/i, "");
+            if (path.length > 1) path = path.replace(/\/$/, "");
+            return path || "/";
+        }
+
+        const current = normalise(window.location.pathname);
+
+        headerContainer.querySelectorAll("#pbmit-top-menu > li").forEach(function (li) {
+            const link = li.querySelector("a");
+            if (!link) return;
+
+            const linkPath = normalise(new URL(link.getAttribute("href"), window.location.origin).pathname);
+
+            if (linkPath === current) {
+                li.classList.add("current-menu-item", "active");
+                link.setAttribute("aria-current", "page");
+            }
+        });
+    })();
 });

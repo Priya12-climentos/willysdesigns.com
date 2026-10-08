@@ -10,7 +10,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <title>WillysDesigns Demo4 &#8211; Interior Design</title>
+    <title>WillysDesigns &#8211; Interior Designs & Services</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
     <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
@@ -43,6 +43,672 @@
     <link rel='stylesheet' id='ctf_styles-css'
         href='/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=2.7.0'
         media='all' />
+
+    <style>
+        /* ========================================================
+   "What We Offer" - Precision SVG Cutout Fix
+   ======================================================== */
+
+        /* 1. Flex equalization across slider columns */
+        .pbmit-service-style-4,
+        .pbmit-element-service-style-4 .swiper-slide {
+            display: flex !important;
+            height: auto !important;
+        }
+
+        /* 2. Main Card Container */
+        .pbmit-service-style-4 .pbminfotech-post-item {
+            position: relative !important;
+            width: 100% !important;
+            height: 480px !important;
+            background-color: transparent !important;
+            overflow: visible !important;
+            /* Prevents button shadow clipping */
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Kill all glitchy pseudo-elements */
+        .pbmit-service-style-4 .pbminfotech-post-item::before,
+        .pbmit-service-style-4 .pbminfotech-post-item::after,
+        .pbmit-service-style-4 .pbminfotech-box-content::before,
+        .pbmit-service-style-4 .pbminfotech-box-content::after,
+        .pbmit-service-style-4 .pbmit-content-box::before,
+        .pbmit-service-style-4 .pbmit-content-box::after {
+            display: none !important;
+        }
+
+        /* 3. The Shaped Card Canvas: Direct SVG Mask with rounded corners and bottom-right scoop */
+        .pbmit-service-style-4 .pbminfotech-box-content {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 28px !important;
+            overflow: hidden !important;
+            background-color: #1a1614 !important;
+            z-index: 1 !important;
+
+            /* Creates the seamless organic scoop with perfect reverse fillets */
+            --mask: radial-gradient(circle 52px at calc(100% - 45px) calc(100% - 45px), transparent 48px, #000 49px);
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+        }
+
+        /* 4. Full-bleed Image Layer inside the masked shape */
+        .pbmit-service-style-4 .pbmit-service-image-wrapper,
+        .pbmit-service-style-4 .pbmit-featured-img-wrapper,
+        .pbmit-service-style-4 .pbmit-featured-wrapper {
+            position: absolute !important;
+            inset: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-featured-wrapper img.wp-post-image,
+        .pbmit-service-style-4 .pbmit-featured-wrapper img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+        }
+
+        /* 5. Title & Label text overlay */
+        .pbmit-service-style-4 .pbmit-content-box {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 110px !important;
+            /* Stays clear of the cutout */
+            padding: 28px 24px !important;
+            z-index: 3 !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-serv-cat {
+            display: none !important;
+            /* Hide category tag to keep pure title aesthetic */
+        }
+
+        .pbmit-service-style-4 .pbmit-service-title {
+            margin: 0 !important;
+            font-size: 1.35rem !important;
+            font-weight: 700 !important;
+            line-height: 1.25 !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-service-title a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-service-description {
+            display: none !important;
+        }
+
+        /* 6. Floating Action Button: Centered precisely in the cutout pocket */
+        .pbmit-service-style-4 .pbmit-service-btn {
+            position: absolute !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50% !important;
+            background-color: #c49a6c !important;
+            /* Authentic warm tan/gold */
+            z-index: 10 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            text-decoration: none !important;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+            transition: transform 0.25s ease, background-color 0.25s ease !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-service-btn:hover {
+            background-color: #b28859 !important;
+            transform: scale(1.08) !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-service-btn .pbmit-button-icon {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .pbmit-service-style-4 .pbmit-service-btn i {
+            color: #ffffff !important;
+            font-size: 14px !important;
+            display: inline-block !important;
+        }
+    </style>
+
+
+    <style>
+        /* ========================================================
+   Portfolio Gallery Fix (Strictly Scoped)
+   ======================================================== */
+
+        /* 1. Only enforce aspect-ratio inside the portfolio section */
+        .pbmit-portfolio-style-3 .pbmit-featured-img-wrapper,
+        .pbmit-portfolio-style-3 .pbmit-featured-wrapper {
+            width: 100% !important;
+            aspect-ratio: 4 / 3 !important;
+            overflow: hidden !important;
+            position: relative;
+        }
+
+        /* 2. Fix the image crop only inside this portfolio */
+        .pbmit-portfolio-style-3 .pbmit-featured-wrapper img.wp-post-image {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            display: block !important;
+        }
+
+        /* 3. Top filter menu alignment (won't affect other navigation) */
+        .pbmit-sortable-list-ul {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+            list-style: none;
+            padding: 0;
+            margin: 0 0 35px 0;
+        }
+    </style>
+
+    <!-- Include imagesLoaded library if not already included in your theme -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const grid = document.querySelector(".pbmit-element-posts-wrapper");
+
+            if (window.jQuery && jQuery.fn.isotope && grid) {
+                const $grid = jQuery(grid);
+
+                // Re-layout after images are completely loaded in memory
+                imagesLoaded(grid, function () {
+                    $grid.isotope("layout");
+                });
+
+                // Filter clicks: ensure smooth transition without miscalculating coords
+                jQuery(".pbmit-sortable-list-ul a").on("click", function (e) {
+                    e.preventDefault();
+                    jQuery(".pbmit-sortable-list-ul a").removeClass("pbmit-selected");
+                    jQuery(this).addClass("pbmit-selected");
+
+                    const filterValue = jQuery(this).attr("data-category");
+                    const selector = (filterValue === "*" || !filterValue) ? "*" : "." + filterValue;
+
+                    $grid.isotope({
+                        filter: selector,
+                        transitionDuration: "0.4s",
+                        animationOptions: {
+                            duration: 400,
+                            easing: "linear",
+                            queue: false
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+
+    <style>
+        /* ========================================================
+   Clean Scope & Solid Card Layout
+   ======================================================== */
+        .pbmit-testimonial-style-4 .pbminfotech-post-item,
+        .pbmit-element-testimonial-style-4 .pbminfotech-post-item {
+            background-color: transparent !important;
+            padding: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Solid Brown Card */
+        .custom-testimonial-inner {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: #2b221d !important;
+            border-radius: 28px !important;
+            /* Extra bottom padding reserves space for the stacked buttons on the right */
+            padding: 38px 36px 74px 36px !important;
+            border: 1px solid rgba(222, 177, 115, 0.22) !important;
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45) !important;
+            position: relative !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+        }
+
+        /* Remove any pseudo-element cutout blocks completely */
+        .custom-testimonial-inner::before,
+        .custom-testimonial-inner::after {
+            display: none !important;
+        }
+
+        /* Header & Profile */
+        .testi-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .testi-avatar-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1.5px solid #deb173;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background-color: rgba(222, 177, 115, 0.08);
+        }
+
+        .testi-avatar-circle i {
+            color: #deb173;
+            font-size: 22px;
+        }
+
+        .testi-profile-info {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .testi-author-name {
+            color: #ffffff !important;
+            font-size: 1.25rem !important;
+            font-weight: 700 !important;
+            margin: 0 !important;
+        }
+
+        .testi-badge-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(222, 177, 115, 0.12);
+            border: 1px solid rgba(222, 177, 115, 0.4);
+            color: #e5c365;
+            font-size: 12.5px;
+            font-weight: 500;
+            padding: 3px 12px;
+            border-radius: 999px;
+            width: fit-content;
+            margin-top: 4px;
+        }
+
+        .testi-location {
+            color: #a39589;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        /* Rating Row */
+        .testi-rating-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .testi-stars {
+            display: flex;
+            gap: 4px;
+            color: #f59e0b;
+            font-size: 16px;
+        }
+
+        .testi-score-pill {
+            color: #deb173;
+            font-size: 12.5px;
+            border: 1px solid rgba(222, 177, 115, 0.35);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            background: rgba(222, 177, 115, 0.06);
+        }
+
+        /* Titles and Body */
+        .testi-highlight-title {
+            color: #deb173 !important;
+            font-size: 1.15rem !important;
+            font-weight: 600 !important;
+            font-style: italic !important;
+            margin: 0 0 12px 0 !important;
+            line-height: 1.45 !important;
+        }
+
+        .testi-review-body {
+            color: rgba(255, 255, 255, 0.88) !important;
+            font-size: 0.95rem !important;
+            line-height: 1.65 !important;
+            margin-bottom: 20px !important;
+        }
+
+        .testi-review-body em {
+            color: #deb173;
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Feature tags */
+        .testi-tags-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+        .testi-feature-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(222, 177, 115, 0.28);
+            color: #deb173;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .testi-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.08);
+            margin-bottom: 18px;
+        }
+
+        /* ========================================================
+   Footer Row: Positioned cleanly below the line
+   ======================================================== */
+        .testi-footer-row {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            position: relative !important;
+            z-index: 10 !important;
+            margin-top: 6px !important;
+            padding-right: 0 !important;
+        }
+
+        .testi-date-text {
+            color: #8c7e73;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        /* ========================================================
+   Helpful Button: Below the line, centered over the Nav Pill
+   ======================================================== */
+        .helpful-btn-pill {
+            /* Reset absolute coordinates so it stays below the divider */
+            position: relative !important;
+            bottom: auto !important;
+            top: auto !important;
+            right: auto !important;
+            left: auto !important;
+
+            /* Alignment in the footer row */
+            margin-right: 22px !important;
+            /* Centers it over the < | > buttons */
+            z-index: 25 !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            color: #ffffff !important;
+            padding: 6px 16px !important;
+            border-radius: 999px !important;
+            font-size: 12.5px !important;
+            font-weight: 600 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            cursor: pointer !important;
+            outline: none !important;
+            white-space: nowrap !important;
+            transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+            user-select: none;
+        }
+
+        /* Active / Voted State */
+        .helpful-btn-pill.voted {
+            background: #deb173 !important;
+            border-color: #deb173 !important;
+            color: #241c17 !important;
+            box-shadow: 0 4px 16px rgba(222, 177, 115, 0.4) !important;
+        }
+
+        .helpful-btn-pill.voted i {
+            transform: scale(1.25) rotate(-8deg);
+            color: #241c17 !important;
+        }
+
+        /* ========================================================
+   Navigation Controls (Anchored at the bottom-right scoop)
+   ======================================================== */
+        .pbmit-element-testimonial-style-4 .pbmit-slider-nav-wrap,
+        .pbmit-element-testimonial-style-4 .pbmit-swiper-buttons {
+            position: absolute !important;
+            bottom: 0px !important;
+            right: 28px !important;
+            z-index: 100 !important;
+            display: flex !important;
+            gap: 8px !important;
+        }
+
+        /* Click Pop Animation Keyframe */
+        @keyframes thumbPop {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.35) rotate(-15deg);
+            }
+
+            100% {
+                transform: scale(1.25) rotate(-8deg);
+            }
+        }
+
+        .helpful-btn-pill.pop-anim i {
+            animation: thumbPop 0.35s ease forwards;
+        }
+
+        /* ========================================================
+   Navigation Controls (Anchored Directly Below Helpful Button)
+   ======================================================== */
+        .swiper-buttons,
+        .pbmit-swiper-buttons,
+        .pbmit-slider-nav,
+        .pbmit-slider-nav-wrap,
+        .pbmit-element-testimonial-style-4 .swiper-button-next,
+        .pbmit-element-testimonial-style-4 .swiper-button-prev {
+            position: absolute !important;
+            z-index: 100 !important;
+            pointer-events: auto !important;
+        }
+
+        .pbmit-element-testimonial-style-4 .pbmit-slider-nav-wrap,
+        .pbmit-element-testimonial-style-4 .pbmit-swiper-buttons {
+            bottom: 20px !important;
+            /* Anchored at bottom right */
+            right: 28px !important;
+            /* Shared horizontal right coordinate */
+            display: flex !important;
+            gap: 8px !important;
+        }
+
+        /* ========================================================
+   Force full card width & fix button clipping
+   ======================================================== */
+
+/* 1. Ensure the swiper slide & parent take full available width */
+.pbmit-element-testimonial-style-4,
+.pbmit-element-testimonial-style-4 .swiper,
+.pbmit-element-testimonial-style-4 .swiper-wrapper,
+.pbmit-element-testimonial-style-4 .swiper-slide,
+.pbmit-testimonial-style-4 .pbminfotech-post-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. Fix the card container */
+.custom-testimonial-inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important; /* Prevents edge-clipping of inner elements */
+    box-sizing: border-box !important;
+}
+
+/* ========================================================
+   Mobile View Overrides (Screens <= 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+    .custom-testimonial-inner {
+        padding: 24px 16px 85px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    /* Wrap the footer row so items don't push outside horizontally */
+    .testi-footer-row {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        width: 100% !important;
+        margin-top: 12px !important;
+    }
+
+    /* Allow the date text to wrap normally */
+    .testi-date-text {
+        white-space: normal !important;
+        font-size: 12px !important;
+        width: 100% !important;
+        display: block !important;
+    }
+
+    /* Ensure the button fits cleanly within the card */
+    .helpful-btn-pill {
+        position: static !important;
+        margin: 0 !important;
+        align-self: flex-start !important;
+        max-width: 100% !important;
+        white-space: nowrap !important;
+    }
+
+    /* Keep Swiper arrows docked in the bottom-right corner */
+    .pbmit-element-testimonial-style-4 .pbmit-slider-nav-wrap,
+    .pbmit-element-testimonial-style-4 .pbmit-swiper-buttons {
+        position: absolute !important;
+        bottom: 16px !important;
+        right: 16px !important;
+        z-index: 99 !important;
+
+    }
+    /* ========================================================
+   Force Full Width Across Entire Testimonial Hierarchy
+   ======================================================== */
+@media (max-width: 991px) {
+    /* 1. Prevent parent columns/wrappers from limiting width */
+    .pbmit-element-testimonial-style-4,
+    .pbmit-testimonial-style-4,
+    .pbmit-element-testimonial-style-4 .swiper,
+    .pbmit-element-testimonial-style-4 .swiper-container,
+    .pbmit-element-testimonial-style-4 .swiper-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Overrule Swiper's inline calculated slide width */
+    .pbmit-element-testimonial-style-4 .swiper-slide,
+    .pbmit-element-testimonial-style-4 .swiper-slide-active,
+    .pbmit-testimonial-style-4 .pbminfotech-post-item,
+    .pbmit-element-testimonial-style-4 .pbminfotech-post-item {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Stretch the brown card across the full available space */
+    .custom-testimonial-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+}
+}
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.helpful-btn-pill').forEach(function (button) {
+                const id = button.getAttribute('data-id');
+                const countEl = button.querySelector('.helpful-num');
+
+                // 1. Retrieve saved vote status & custom count from localStorage
+                const isVoted = localStorage.getItem('helpful_voted_' + id) === 'true';
+                const savedCount = localStorage.getItem('helpful_count_' + id);
+
+                if (savedCount !== null) {
+                    countEl.textContent = savedCount;
+                }
+
+                if (isVoted) {
+                    button.classList.add('voted');
+                }
+
+                // 2. Click Handler with Animation and Counter Toggle
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Prevents Swiper from triggering a slide-drag or swipe
+
+                    let currentCount = parseInt(countEl.textContent, 10);
+                    if (isNaN(currentCount)) currentCount = 0;
+
+                    // Trigger micro-bounce animation
+                    button.classList.remove('pop-anim');
+                    void button.offsetWidth; // Force CSS reflow
+                    button.classList.add('pop-anim');
+
+                    if (!button.classList.contains('voted')) {
+                        // Vote UP
+                        button.classList.add('voted');
+                        const newCount = currentCount + 1;
+                        countEl.textContent = newCount;
+                        localStorage.setItem('helpful_voted_' + id, 'true');
+                        localStorage.setItem('helpful_count_' + id, newCount);
+                    } else {
+                        // Vote DOWN (Undo)
+                        button.classList.remove('voted');
+                        const newCount = Math.max(0, currentCount - 1);
+                        countEl.textContent = newCount;
+                        localStorage.setItem('helpful_voted_' + id, 'false');
+                        localStorage.setItem('helpful_count_' + id, newCount);
+                    }
+                });
+            });
+        });
+    </script>
+
     <style id="wp-emoji-styles-inline-css">
         img.wp-smiley,
         img.emoji {
@@ -1622,16 +2288,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <meta name="generator"
         content="Powered by Slider Revolution 6.7.58 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <link rel="icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-32x32.png"
-        sizes="32x32" />
-    <link rel="icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-192x192.png"
-        sizes="192x192" />
-    <link rel="apple-touch-icon"
-        href="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-180x180.png" />
-    <meta name="msapplication-TileImage"
-        content="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/cropped-favicon-270x270.png" />
+    <link rel="icon" href="../pic/favicon.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="../pic/favicon.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="../pic/favicon.png" />
+<meta name="msapplication-TileImage" content="../pic/favicon.png" />
     <script>
         window._tpt ??= {};
         window.SR7 ??= {};
@@ -1929,6 +2589,40 @@
     .indexhero-btn:hover span {
         transform: translateX(7px);
     }
+
+    .indexhero-btn {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;   /* makes ::before z-index:-1 stay inside the button */
+}
+
+.indexhero-btn,
+.indexhero-btn:visited {
+    background: #fff;
+    color: #111;
+}
+
+.indexhero-btn:hover,
+.indexhero-btn:focus,
+.indexhero-btn:focus-visible,
+.indexhero-btn:active {
+    background: #111 !important;
+    color: #fff !important;
+    outline: none;
+    box-shadow: none;
+}
+
+.indexhero-btn:hover::before,
+.indexhero-btn:focus::before,
+.indexhero-btn:active::before {
+    transform: translateY(0);
+}
+
+.indexhero-btn:hover span,
+.indexhero-btn:focus span,
+.indexhero-btn:active span {
+    color: #fff !important;
+}
 
     /* =========================================================
    HERO SIDE DETAILS
@@ -2793,7 +3487,7 @@
                         commitment to flexibility and customization.
                     </p>
 
-                    <a href="#" class="about-button">
+                    <a href="/pages/about-us.html" class="about-button">
                         <span>More About Us</span>
 
                         <span class="about-arrow">
@@ -2815,11 +3509,6 @@
             <div class="indexhero-overlay"></div>
 
             <div class="indexhero-content">
-
-                <div class="indexhero-tag">
-                    Architecture & Interior Design
-                </div>
-
                 <h2 style="color: white;">
                     Designing
                     <span>spaces</span>
@@ -2832,23 +3521,14 @@
                     creativity and refined design.
                 </p>
 
-                <a href="contact-us.html" class="indexhero-btn">
+                <a href="/pages/Portfolio.html" class="indexhero-btn">
                     Explore Our Work
                     <span>→</span>
                 </a>
 
             </div>
 
-            <div class="indexhero-side-info">
-                Scroll to explore
-            </div>
-
-            <div class="indexhero-scroll">
-                Discover
-            </div>
-
         </section>
-
 
         <div class="site-content-contain ">
             <div class="site-content-wrap">
@@ -2944,11 +3624,15 @@
                                                                                     Instagram-worthy masterpieces
 
                                                                                 </h2>
-                                                                                <div class="pbmit-heading-desc">Sed do
-                                                                                    eiusmod tempor incididunt ut labore
-                                                                                    et dolore magna aliqua quis ipsum
-                                                                                    suspendisse ultrices gravida risus
-                                                                                    commodo viverra maecenas.</div>
+                                                                                <div class="pbmit-heading-desc">We
+                                                                                    transform ordinary spaces into
+                                                                                    elegant, inspiring interiors that
+                                                                                    reflect personality and purpose.
+                                                                                    With a perfect balance of
+                                                                                    aesthetics, functionality, and
+                                                                                    craftsmanship, we create spaces
+                                                                                    designed to be admired, enjoyed, and
+                                                                                    remembered.</div>
                                                                             </div>
                                                                         </div>
 
@@ -3171,7 +3855,7 @@
                                                                                                         decoding="async"
                                                                                                         width="770"
                                                                                                         height="950"
-                                                                                                        src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/service-01-770x950.jpg"
+                                                                                                        src="../pic/Offer-1.jpeg"
                                                                                                         class="attachment-pbmit-img-770x950 size-pbmit-img-770x950 wp-post-image"
                                                                                                         alt="service-01" />
                                                                                                 </div>
@@ -3222,7 +3906,7 @@
                                                                                                         decoding="async"
                                                                                                         width="770"
                                                                                                         height="950"
-                                                                                                        src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/service-02-770x950.jpg"
+                                                                                                        src="../pic/Offer-2.jpeg"
                                                                                                         class="attachment-pbmit-img-770x950 size-pbmit-img-770x950 wp-post-image"
                                                                                                         alt="service-02" />
                                                                                                 </div>
@@ -3273,7 +3957,7 @@
                                                                                                         decoding="async"
                                                                                                         width="770"
                                                                                                         height="950"
-                                                                                                        src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/service-03-770x950.jpg"
+                                                                                                        src="../pic/Offer-3.jpeg"
                                                                                                         class="attachment-pbmit-img-770x950 size-pbmit-img-770x950 wp-post-image"
                                                                                                         alt="service-03" />
                                                                                                 </div>
@@ -3324,7 +4008,7 @@
                                                                                                         decoding="async"
                                                                                                         width="770"
                                                                                                         height="950"
-                                                                                                        src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/service-04-770x950.jpg"
+                                                                                                        src="../pic/Offer-4.jpeg"
                                                                                                         class="attachment-pbmit-img-770x950 size-pbmit-img-770x950 wp-post-image"
                                                                                                         alt="service-04" />
                                                                                                 </div>
@@ -3375,7 +4059,7 @@
                                                                                                         decoding="async"
                                                                                                         width="770"
                                                                                                         height="950"
-                                                                                                        src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/service-05-770x950.jpg"
+                                                                                                        src="../pic/Offer-5.jpg"
                                                                                                         class="attachment-pbmit-img-770x950 size-pbmit-img-770x950 wp-post-image"
                                                                                                         alt="service-05" />
                                                                                                 </div>
@@ -3525,9 +4209,8 @@
                                                                             </h4>
                                                                             <h2 class="pbmit-element-title">
 
-                                                                                Get amazing cleaning in<br> 4 simple
-                                                                                steps
-
+                                                                                From first visit to final handover<br>
+                                                                                in 4 simple steps
                                                                             </h2>
                                                                         </div>
                                                                         <div
@@ -3553,10 +4236,12 @@
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="pbmit-static-box-desc">
-                                                                                                    We offer competitive
-                                                                                                    and affordable rates
-                                                                                                    for our interior
-                                                                                                    design services.
+                                                                                                    We meet you at your
+                                                                                                    home or office,
+                                                                                                    listen to what you
+                                                                                                    need and take
+                                                                                                    accurate
+                                                                                                    measurements.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </li>
@@ -3571,16 +4256,18 @@
                                                                                                 class="pbmit-content-box">
                                                                                                 <div
                                                                                                     class="pbmit-static-box-title">
-                                                                                                    <h5>Preliminary
-                                                                                                        computer designs
+                                                                                                    <h5>2D plans and 3D
+                                                                                                        previews
                                                                                                     </h5>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="pbmit-static-box-desc">
-                                                                                                    We offer competitive
-                                                                                                    and affordable rates
-                                                                                                    for our interior
-                                                                                                    design services.
+                                                                                                    We prepare layouts
+                                                                                                    and realistic 3D
+                                                                                                    views, so you can
+                                                                                                    see the finished
+                                                                                                    room before any work
+                                                                                                    begins.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </li>
@@ -3595,15 +4282,17 @@
                                                                                                 class="pbmit-content-box">
                                                                                                 <div
                                                                                                     class="pbmit-static-box-title">
-                                                                                                    <h5>Work in progress
+                                                                                                    <h5>Build and
+                                                                                                        install
                                                                                                     </h5>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="pbmit-static-box-desc">
-                                                                                                    We offer competitive
-                                                                                                    and affordable rates
-                                                                                                    for our interior
-                                                                                                    design services.
+                                                                                                    Our team carries out
+                                                                                                    the work on site and
+                                                                                                    keeps you updated
+                                                                                                    with regular
+                                                                                                    progress photos.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </li>
@@ -3618,15 +4307,17 @@
                                                                                                 class="pbmit-content-box">
                                                                                                 <div
                                                                                                     class="pbmit-static-box-title">
-                                                                                                    <h5>Start the design
-                                                                                                        process</h5>
+                                                                                                    <h5>Handover and
+                                                                                                        styling</h5>
                                                                                                 </div>
                                                                                                 <div
                                                                                                     class="pbmit-static-box-desc">
-                                                                                                    We offer competitive
-                                                                                                    and affordable rates
-                                                                                                    for our interior
-                                                                                                    design services.
+                                                                                                    We finish the
+                                                                                                    details, clean up
+                                                                                                    and style the space,
+                                                                                                    then walk you
+                                                                                                    through it before
+                                                                                                    handover.
                                                                                                 </div>
                                                                                             </div>
                                                                                         </li>
@@ -3765,11 +4456,7 @@
                                                                                             class="pbmit-sortable-link pbmit-selected"
                                                                                             data-category="*"
                                                                                             data-sortby="*">All</a></li>
-                                                                                    <li><a href="#"
-                                                                                            class="pbmit-sortable-link"
-                                                                                            data-category="architecture"
-                                                                                            data-sortby="pbmit-term-30">Architecture</a>
-                                                                                    </li>
+
                                                                                     <li><a href="#"
                                                                                             class="pbmit-sortable-link"
                                                                                             data-category="bedroom"
@@ -3777,13 +4464,9 @@
                                                                                     </li>
                                                                                     <li><a href="#"
                                                                                             class="pbmit-sortable-link"
-                                                                                            data-category="furniture"
-                                                                                            data-sortby="pbmit-term-37">Furniture</a>
-                                                                                    </li>
-                                                                                    <li><a href="#"
-                                                                                            class="pbmit-sortable-link"
                                                                                             data-category="interior"
-                                                                                            data-sortby="pbmit-term-44">Interior</a>
+                                                                                            data-sortby="pbmit-term-44">Living
+                                                                                            Room</a>
                                                                                     </li>
                                                                                     <li><a href="#"
                                                                                             class="pbmit-sortable-link"
@@ -3808,7 +4491,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-01-960x760.jpg"
+                                                                                                src="../pic/B-1.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-01" />
                                                                                         </div>
@@ -3838,7 +4521,7 @@
                                                                                 </div>
                                                                             </article>
                                                                             <article
-                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 furniture pbmit-term-37 pbmit-even pbmit-col-odd">
+                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 kitchen pbmit-term-45 pbmit-even pbmit-col-odd">
                                                                                 <div class="pbminfotech-post-content">
                                                                                     <div
                                                                                         class="pbmit-featured-img-wrapper">
@@ -3847,7 +4530,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-02-960x760.jpg"
+                                                                                                src="../pic/K-1.jpg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-02" />
                                                                                         </div>
@@ -3858,7 +4541,7 @@
                                                                                             class="pbminfotech-titlebox">
                                                                                             <div class="pbmit-port-cat">
                                                                                                 <a href="#"
-                                                                                                    rel="tag">Furniture</a>
+                                                                                                    rel="tag">Kitchen</a>
                                                                                             </div>
                                                                                             <h3
                                                                                                 class="pbmit-portfolio-title">
@@ -3886,7 +4569,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-03-960x760.jpg"
+                                                                                                src="../pic/L-2.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-03" />
                                                                                         </div>
@@ -3897,7 +4580,8 @@
                                                                                             class="pbminfotech-titlebox">
                                                                                             <div class="pbmit-port-cat">
                                                                                                 <a href="#"
-                                                                                                    rel="tag">Interior</a>
+                                                                                                    rel="tag">Living
+                                                                                                    Room</a>
                                                                                             </div>
                                                                                             <h3
                                                                                                 class="pbmit-portfolio-title">
@@ -3924,7 +4608,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-04-960x760.jpg"
+                                                                                                src="../pic/K-3.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-04" />
                                                                                         </div>
@@ -3963,7 +4647,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-05-960x760.jpg"
+                                                                                                src="../pic/B-2.jpg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-05" />
                                                                                         </div>
@@ -3993,7 +4677,7 @@
                                                                                 </div>
                                                                             </article>
                                                                             <article
-                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 architecture pbmit-term-30 pbmit-even pbmit-col-even">
+                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 kitchen pbmit-term-45 pbmit-even pbmit-col-even">
                                                                                 <div class="pbminfotech-post-content">
                                                                                     <div
                                                                                         class="pbmit-featured-img-wrapper">
@@ -4002,7 +4686,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-06-960x760.jpg"
+                                                                                                src="../pic/A-1.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-06" />
                                                                                         </div>
@@ -4013,7 +4697,7 @@
                                                                                             class="pbminfotech-titlebox">
                                                                                             <div class="pbmit-port-cat">
                                                                                                 <a href="#"
-                                                                                                    rel="tag">Architecture</a>
+                                                                                                    rel="tag">Kitchen</a>
                                                                                             </div>
                                                                                             <h3
                                                                                                 class="pbmit-portfolio-title">
@@ -4040,7 +4724,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-07-960x760.jpg"
+                                                                                                src="../pic/L-1.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-07" />
                                                                                         </div>
@@ -4051,7 +4735,8 @@
                                                                                             class="pbminfotech-titlebox">
                                                                                             <div class="pbmit-port-cat">
                                                                                                 <a href="#"
-                                                                                                    rel="tag">Interior</a>
+                                                                                                    rel="tag">Living
+                                                                                                    Room</a>
                                                                                             </div>
                                                                                             <h3
                                                                                                 class="pbmit-portfolio-title">
@@ -4070,7 +4755,7 @@
                                                                                 </div>
                                                                             </article>
                                                                             <article
-                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 furniture pbmit-term-37 pbmit-even pbmit-col-even">
+                                                                                class="pbmit-ele pbmit-ele-portfolio pbmit-portfolio-style-3 col-md-6 col-lg-3 bedroom pbmit-term-33 pbmit-even pbmit-col-even">
                                                                                 <div class="pbminfotech-post-content">
                                                                                     <div
                                                                                         class="pbmit-featured-img-wrapper">
@@ -4079,7 +4764,7 @@
                                                                                             <img loading="lazy"
                                                                                                 decoding="async"
                                                                                                 width="960" height="760"
-                                                                                                src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/portfolio-08-960x760.jpg"
+                                                                                                src="..\pic\B-3.jpeg"
                                                                                                 class="attachment-pbmit-img-960x760 size-pbmit-img-960x760 wp-post-image"
                                                                                                 alt="portfolio-08" />
                                                                                         </div>
@@ -4090,7 +4775,7 @@
                                                                                             class="pbminfotech-titlebox">
                                                                                             <div class="pbmit-port-cat">
                                                                                                 <a href="#"
-                                                                                                    rel="tag">Furniture</a>
+                                                                                                    rel="tag">Bedroom</a>
                                                                                             </div>
                                                                                             <h3
                                                                                                 class="pbmit-portfolio-title">
@@ -4117,6 +4802,7 @@
                                                 </div>
                                             </div>
                                         </section>
+
                                         <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-64e6058 pbmit-col-stretched-none pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                             data-id="64e6058" data-element_type="section" data-e-type="section">
@@ -4406,10 +5092,12 @@
 
                                                                                         </h2>
                                                                                         <div class="pbmit-heading-desc">
-                                                                                            It is a long established
-                                                                                            fact that a reader will be
-                                                                                            distracted by the readable
-                                                                                            content. </div>
+                                                                                            Designed for lasting value,
+                                                                                            our interiors are backed by
+                                                                                            a 5-year warranty, ensuring
+                                                                                            peace of mind and confidence
+                                                                                            in the quality of every
+                                                                                            detail. </div>
                                                                                     </div>
                                                                                     <div class="pbmit-box-number-wrap">
                                                                                         <div
@@ -4436,10 +5124,12 @@
 
                                                                                         </h2>
                                                                                         <div class="pbmit-heading-desc">
-                                                                                            It is a long established
-                                                                                            fact that a reader will be
-                                                                                            distracted by the readable
-                                                                                            content. </div>
+                                                                                            We combine creative thinking
+                                                                                            with the latest design
+                                                                                            technologies to deliver
+                                                                                            precise planning, realistic
+                                                                                            visualizations, and smarter
+                                                                                            interior solutions. </div>
                                                                                     </div>
                                                                                     <div class="pbmit-box-number-wrap">
                                                                                         <div
@@ -4466,10 +5156,13 @@
 
                                                                                         </h2>
                                                                                         <div class="pbmit-heading-desc">
-                                                                                            It is a long established
-                                                                                            fact that a reader will be
-                                                                                            distracted by the readable
-                                                                                            content. </div>
+                                                                                            From concept to completion,
+                                                                                            we focus on exceptional
+                                                                                            design, premium materials,
+                                                                                            and meticulous craftsmanship
+                                                                                            to create spaces that are
+                                                                                            both beautiful and
+                                                                                            functional. </div>
                                                                                     </div>
                                                                                     <div class="pbmit-box-number-wrap">
                                                                                         <div
@@ -4496,10 +5189,14 @@
 
                                                                                         </h2>
                                                                                         <div class="pbmit-heading-desc">
-                                                                                            It is a long established
-                                                                                            fact that a reader will be
-                                                                                            distracted by the readable
-                                                                                            content. </div>
+                                                                                            No hidden costs, no
+                                                                                            surprises. We maintain
+                                                                                            complete transparency
+                                                                                            throughout the project,
+                                                                                            helping you make informed
+                                                                                            decisions while bringing
+                                                                                            your dream space to life.
+                                                                                        </div>
                                                                                     </div>
                                                                                     <div class="pbmit-box-number-wrap">
                                                                                         <div
@@ -4623,391 +5320,625 @@
                                                                                         </div>
                                                                                         <div
                                                                                             class="pbmit-element-posts-wrapper row multi-columns-row swiper-container">
+                                                                                            <!-- ==================== SLIDE 1 ==================== -->
                                                                                             <article
-                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12  pbmit-odd pbmit-col-odd">
+                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12">
                                                                                                 <div
                                                                                                     class="pbminfotech-post-item">
                                                                                                     <div
-                                                                                                        class="pbmit-box-content-wrap">
+                                                                                                        class="custom-testimonial-inner">
+
                                                                                                         <div
-                                                                                                            class="pbminfotech-box-star-ratings">
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-desc">
-                                                                                                            <blockquote
-                                                                                                                class="pbminfotech-testimonial-text">
-                                                                                                                <p>Their
-                                                                                                                    team
-                                                                                                                    are
-                                                                                                                    easy
-                                                                                                                    to
-                                                                                                                    work
-                                                                                                                    with
-                                                                                                                    and
-                                                                                                                    helped
-                                                                                                                    me
-                                                                                                                    make
-                                                                                                                    amazing
-                                                                                                                    websites
-                                                                                                                    in a
-                                                                                                                    short
-                                                                                                                    amount
-                                                                                                                    of
-                                                                                                                    time.
-                                                                                                                    Thanks
-                                                                                                                    guys
-                                                                                                                    for
-                                                                                                                    all
-                                                                                                                    your
-                                                                                                                    hard
-                                                                                                                    work.
-                                                                                                                    Trust
-                                                                                                                    us
-                                                                                                                    we
-                                                                                                                    looked
-                                                                                                                    for
-                                                                                                                    a
-                                                                                                                    very
-                                                                                                                    long
-                                                                                                                    time.
-                                                                                                                </p>
-                                                                                                            </blockquote>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-author d-flex align-items-center">
+                                                                                                            class="testi-header">
                                                                                                             <div
-                                                                                                                class="pbminfotech-box-img">
-                                                                                                                <div
-                                                                                                                    class="pbmit-featured-img-wrapper">
-                                                                                                                    <div
-                                                                                                                        class="pbmit-featured-wrapper">
-                                                                                                                        <img loading="lazy"
-                                                                                                                            decoding="async"
-                                                                                                                            width="400"
-                                                                                                                            height="400"
-                                                                                                                            src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-04.jpg"
-                                                                                                                            class="attachment-pbmit-img-500x500 size-pbmit-img-500x500 wp-post-image"
-                                                                                                                            alt="reviewer-04"
-                                                                                                                            srcset="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-04.jpg 400w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-04-150x150.jpg 150w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-04-300x300.jpg 300w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-04-100x100.jpg 100w"
-                                                                                                                            sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                                                    </div>
-                                                                                                                </div>
+                                                                                                                class="testi-avatar-circle">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-user"></i>
                                                                                                             </div>
                                                                                                             <div
-                                                                                                                class="pbmit-auther-content">
+                                                                                                                class="testi-profile-info">
                                                                                                                 <h3
-                                                                                                                    class="pbminfotech-box-title">
-                                                                                                                    Olivia
-                                                                                                                    Cruz
+                                                                                                                    class="testi-author-name">
+                                                                                                                    Aarav
+                                                                                                                    &amp;
+                                                                                                                    Sneha
+                                                                                                                    Sharma
                                                                                                                 </h3>
+                                                                                                                <span
+                                                                                                                    class="testi-badge-verified">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-circle-check"></i>
+                                                                                                                    Verified
+                                                                                                                    Homeowner
+                                                                                                                    &bull;
+                                                                                                                    3BHK
+                                                                                                                    Full
+                                                                                                                    Interior
+                                                                                                                </span>
                                                                                                                 <div
-                                                                                                                    class="pbminfotech-testimonial-detail">
-                                                                                                                    Grorgia,
-                                                                                                                    USA
+                                                                                                                    class="testi-location">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-location-dot"></i>
+                                                                                                                    Prestige
+                                                                                                                    Lakeside,
+                                                                                                                    Whitefield
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-rating-row">
+                                                                                                            <div
+                                                                                                                class="testi-stars">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                            </div>
+                                                                                                            <span
+                                                                                                                class="testi-score-pill">5.0
+                                                                                                                |
+                                                                                                                Precise
+                                                                                                                3D
+                                                                                                                Execution</span>
+                                                                                                        </div>
+
+                                                                                                        <h4
+                                                                                                            class="testi-highlight-title">
+                                                                                                            "Handed over
+                                                                                                            right before
+                                                                                                            festival
+                                                                                                            week,
+                                                                                                            identical to
+                                                                                                            3D renders!"
+                                                                                                        </h4>
+
+                                                                                                        <p
+                                                                                                            class="testi-review-body">
+                                                                                                            <em>Willysdesign</em>
+                                                                                                            managed
+                                                                                                            end-to-end
+                                                                                                            execution of
+                                                                                                            our new
+                                                                                                            apartment.
+                                                                                                            The fluted
+                                                                                                            charcoal
+                                                                                                            timber
+                                                                                                            louvers and
+                                                                                                            hidden
+                                                                                                            entryway
+                                                                                                            storage look
+                                                                                                            100% true to
+                                                                                                            the initial
+                                                                                                            design
+                                                                                                            walk-through.
+                                                                                                            Their
+                                                                                                            deep-cleaning
+                                                                                                            and turnkey
+                                                                                                            handover was
+                                                                                                            spotless.
+                                                                                                        </p>
+
+                                                                                                        <div
+                                                                                                            class="testi-tags-row">
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-clock-rotate-left"></i>
+                                                                                                                On-Time
+                                                                                                                Handover</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-indian-rupee-sign"></i>
+                                                                                                                Zero
+                                                                                                                Billing
+                                                                                                                Surprises</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-layer-group"></i>
+                                                                                                                Fluted
+                                                                                                                Woodwork</span>
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-divider">
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-footer-row">
+                                                                                                            <span
+                                                                                                                class="testi-date-text">Experience
+                                                                                                                shared
+                                                                                                                in
+                                                                                                                September
+                                                                                                                2026</span>
+                                                                                                            <button
+                                                                                                                type="button"
+                                                                                                                class="helpful-btn-pill"
+                                                                                                                data-id="aarav-sneha">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-thumbs-up"></i>
+                                                                                                                Helpful
+                                                                                                                ( <span
+                                                                                                                    class="helpful-num">42</span>
+                                                                                                                )
+                                                                                                            </button>
+                                                                                                        </div>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </article>
+
+                                                                                            <!-- ==================== SLIDE 2 ==================== -->
                                                                                             <article
-                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12  pbmit-even pbmit-col-even">
+                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12">
                                                                                                 <div
                                                                                                     class="pbminfotech-post-item">
                                                                                                     <div
-                                                                                                        class="pbmit-box-content-wrap">
+                                                                                                        class="custom-testimonial-inner">
+
                                                                                                         <div
-                                                                                                            class="pbminfotech-box-star-ratings">
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-desc">
-                                                                                                            <blockquote
-                                                                                                                class="pbminfotech-testimonial-text">
-                                                                                                                <p>Their
-                                                                                                                    team
-                                                                                                                    are
-                                                                                                                    easy
-                                                                                                                    to
-                                                                                                                    work
-                                                                                                                    with
-                                                                                                                    and
-                                                                                                                    helped
-                                                                                                                    me
-                                                                                                                    make
-                                                                                                                    amazing
-                                                                                                                    websites
-                                                                                                                    in a
-                                                                                                                    short
-                                                                                                                    amount
-                                                                                                                    of
-                                                                                                                    time.
-                                                                                                                    Thanks
-                                                                                                                    guys
-                                                                                                                    for
-                                                                                                                    all
-                                                                                                                    your
-                                                                                                                    hard
-                                                                                                                    work.
-                                                                                                                    Trust
-                                                                                                                    us
-                                                                                                                    we
-                                                                                                                    looked
-                                                                                                                    for
-                                                                                                                    a
-                                                                                                                    very
-                                                                                                                    long
-                                                                                                                    time.
-                                                                                                                </p>
-                                                                                                            </blockquote>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-author d-flex align-items-center">
+                                                                                                            class="testi-header">
                                                                                                             <div
-                                                                                                                class="pbminfotech-box-img">
-                                                                                                                <div
-                                                                                                                    class="pbmit-featured-img-wrapper">
-                                                                                                                    <div
-                                                                                                                        class="pbmit-featured-wrapper">
-                                                                                                                        <img loading="lazy"
-                                                                                                                            decoding="async"
-                                                                                                                            width="400"
-                                                                                                                            height="400"
-                                                                                                                            src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-01.jpg"
-                                                                                                                            class="attachment-pbmit-img-500x500 size-pbmit-img-500x500 wp-post-image"
-                                                                                                                            alt=""
-                                                                                                                            srcset="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-01.jpg 400w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-01-150x150.jpg 150w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-01-300x300.jpg 300w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-01-100x100.jpg 100w"
-                                                                                                                            sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                                                    </div>
-                                                                                                                </div>
+                                                                                                                class="testi-avatar-circle">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-user"></i>
                                                                                                             </div>
                                                                                                             <div
-                                                                                                                class="pbmit-auther-content">
+                                                                                                                class="testi-profile-info">
                                                                                                                 <h3
-                                                                                                                    class="pbminfotech-box-title">
-                                                                                                                    Martin
-                                                                                                                    Bailey
+                                                                                                                    class="testi-author-name">
+                                                                                                                    Vikramaditya
+                                                                                                                    Verma
                                                                                                                 </h3>
+                                                                                                                <span
+                                                                                                                    class="testi-badge-verified">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-circle-check"></i>
+                                                                                                                    Verified
+                                                                                                                    Homeowner
+                                                                                                                    &bull;
+                                                                                                                    Penthouse
+                                                                                                                    Interior
+                                                                                                                </span>
                                                                                                                 <div
-                                                                                                                    class="pbminfotech-testimonial-detail">
-                                                                                                                    Grorgia,
-                                                                                                                    USA
+                                                                                                                    class="testi-location">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-location-dot"></i>
+                                                                                                                    100ft
+                                                                                                                    Road,
+                                                                                                                    Indiranagar
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-rating-row">
+                                                                                                            <div
+                                                                                                                class="testi-stars">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                            </div>
+                                                                                                            <span
+                                                                                                                class="testi-score-pill">5.0
+                                                                                                                |
+                                                                                                                Premium
+                                                                                                                Craft
+                                                                                                                &amp;
+                                                                                                                Finishes</span>
+                                                                                                        </div>
+
+                                                                                                        <h4
+                                                                                                            class="testi-highlight-title">
+                                                                                                            "Bespoke
+                                                                                                            Italian
+                                                                                                            quartz
+                                                                                                            island and
+                                                                                                            architectural
+                                                                                                            cove
+                                                                                                            lighting."
+                                                                                                        </h4>
+
+                                                                                                        <p
+                                                                                                            class="testi-review-body">
+                                                                                                            <em>Willysdesign</em>
+                                                                                                            took our
+                                                                                                            penthouse
+                                                                                                            project to
+                                                                                                            an entirely
+                                                                                                            new
+                                                                                                            standard.
+                                                                                                            The
+                                                                                                            integrated
+                                                                                                            acoustic
+                                                                                                            paneling,
+                                                                                                            concealed
+                                                                                                            pantry
+                                                                                                            passage, and
+                                                                                                            textured
+                                                                                                            media wall
+                                                                                                            make the
+                                                                                                            master
+                                                                                                            lounge feel
+                                                                                                            like a
+                                                                                                            private
+                                                                                                            boutique
+                                                                                                            suite.
+                                                                                                            Handed over
+                                                                                                            with zero
+                                                                                                            post-possession
+                                                                                                            snags.
+                                                                                                        </p>
+
+                                                                                                        <div
+                                                                                                            class="testi-tags-row">
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-gem"></i>
+                                                                                                                Italian
+                                                                                                                Stone</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-shield-halved"></i>
+                                                                                                                10-Year
+                                                                                                                Warranty</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-lightbulb"></i>
+                                                                                                                Architectural
+                                                                                                                Lighting</span>
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-divider">
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-footer-row">
+                                                                                                            <span
+                                                                                                                class="testi-date-text">Experience
+                                                                                                                shared
+                                                                                                                in
+                                                                                                                August
+                                                                                                                2026</span>
+                                                                                                            <button
+                                                                                                                type="button"
+                                                                                                                class="helpful-btn-pill"
+                                                                                                                data-id="vikram-verma">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-thumbs-up"></i>
+                                                                                                                Helpful
+                                                                                                                ( <span
+                                                                                                                    class="helpful-num">38</span>
+                                                                                                                )
+                                                                                                            </button>
+                                                                                                        </div>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </article>
+
+                                                                                            <!-- ==================== SLIDE 3 ==================== -->
                                                                                             <article
-                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12  pbmit-odd pbmit-col-odd">
+                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12">
                                                                                                 <div
                                                                                                     class="pbminfotech-post-item">
                                                                                                     <div
-                                                                                                        class="pbmit-box-content-wrap">
+                                                                                                        class="custom-testimonial-inner">
+
                                                                                                         <div
-                                                                                                            class="pbminfotech-box-star-ratings">
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-desc">
-                                                                                                            <blockquote
-                                                                                                                class="pbminfotech-testimonial-text">
-                                                                                                                <p>Their
-                                                                                                                    team
-                                                                                                                    are
-                                                                                                                    easy
-                                                                                                                    to
-                                                                                                                    work
-                                                                                                                    with
-                                                                                                                    and
-                                                                                                                    helped
-                                                                                                                    me
-                                                                                                                    make
-                                                                                                                    amazing
-                                                                                                                    websites
-                                                                                                                    in a
-                                                                                                                    short
-                                                                                                                    amount
-                                                                                                                    of
-                                                                                                                    time.
-                                                                                                                    Thanks
-                                                                                                                    guys
-                                                                                                                    for
-                                                                                                                    all
-                                                                                                                    your
-                                                                                                                    hard
-                                                                                                                    work.
-                                                                                                                    Trust
-                                                                                                                    us
-                                                                                                                    we
-                                                                                                                    looked
-                                                                                                                    for
-                                                                                                                    a
-                                                                                                                    very
-                                                                                                                    long
-                                                                                                                    time.
-                                                                                                                </p>
-                                                                                                            </blockquote>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-author d-flex align-items-center">
+                                                                                                            class="testi-header">
                                                                                                             <div
-                                                                                                                class="pbminfotech-box-img">
-                                                                                                                <div
-                                                                                                                    class="pbmit-featured-img-wrapper">
-                                                                                                                    <div
-                                                                                                                        class="pbmit-featured-wrapper">
-                                                                                                                        <img loading="lazy"
-                                                                                                                            decoding="async"
-                                                                                                                            width="400"
-                                                                                                                            height="400"
-                                                                                                                            src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-02.jpg"
-                                                                                                                            class="attachment-pbmit-img-500x500 size-pbmit-img-500x500 wp-post-image"
-                                                                                                                            alt=""
-                                                                                                                            srcset="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-02.jpg 400w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-02-150x150.jpg 150w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-02-300x300.jpg 300w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-02-100x100.jpg 100w"
-                                                                                                                            sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                                                    </div>
-                                                                                                                </div>
+                                                                                                                class="testi-avatar-circle">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-user"></i>
                                                                                                             </div>
                                                                                                             <div
-                                                                                                                class="pbmit-auther-content">
+                                                                                                                class="testi-profile-info">
                                                                                                                 <h3
-                                                                                                                    class="pbminfotech-box-title">
-                                                                                                                    Alex
-                                                                                                                    Zender
+                                                                                                                    class="testi-author-name">
+                                                                                                                    Meera
+                                                                                                                    &amp;
+                                                                                                                    Siddharth
+                                                                                                                    Nair
                                                                                                                 </h3>
+                                                                                                                <span
+                                                                                                                    class="testi-badge-verified">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-circle-check"></i>
+                                                                                                                    Verified
+                                                                                                                    Homeowner
+                                                                                                                    &bull;
+                                                                                                                    4BHK
+                                                                                                                    Duplex
+                                                                                                                </span>
                                                                                                                 <div
-                                                                                                                    class="pbminfotech-testimonial-detail">
-                                                                                                                    Grorgia,
-                                                                                                                    USA
+                                                                                                                    class="testi-location">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-location-dot"></i>
+                                                                                                                    4th
+                                                                                                                    Block,
+                                                                                                                    Koramangala
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-rating-row">
+                                                                                                            <div
+                                                                                                                class="testi-stars">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                            </div>
+                                                                                                            <span
+                                                                                                                class="testi-score-pill">4.9
+                                                                                                                |
+                                                                                                                Transparent
+                                                                                                                Line-Item
+                                                                                                                BOQ</span>
+                                                                                                        </div>
+
+                                                                                                        <h4
+                                                                                                            class="testi-highlight-title">
+                                                                                                            "Zero cost
+                                                                                                            escalations
+                                                                                                            and
+                                                                                                            completed 10
+                                                                                                            days ahead
+                                                                                                            of
+                                                                                                            schedule!"
+                                                                                                        </h4>
+
+                                                                                                        <p
+                                                                                                            class="testi-review-body">
+                                                                                                            The complete
+                                                                                                            transparency
+                                                                                                            in their
+                                                                                                            line-item
+                                                                                                            quotation
+                                                                                                            made all the
+                                                                                                            difference.
+                                                                                                            Their
+                                                                                                            carpentry
+                                                                                                            crew crafted
+                                                                                                            fluted glass
+                                                                                                            partitions
+                                                                                                            and seamless
+                                                                                                            modular
+                                                                                                            wardrobe
+                                                                                                            storage that
+                                                                                                            completely
+                                                                                                            maximized
+                                                                                                            natural
+                                                                                                            daylight in
+                                                                                                            our living
+                                                                                                            space.
+                                                                                                        </p>
+
+                                                                                                        <div
+                                                                                                            class="testi-tags-row">
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-file-invoice-dollar"></i>
+                                                                                                                Fixed
+                                                                                                                Cost
+                                                                                                                Guarantee</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-truck-fast"></i>
+                                                                                                                Early
+                                                                                                                Handover</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-kitchen-set"></i>
+                                                                                                                Modular
+                                                                                                                Island</span>
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-divider">
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-footer-row">
+                                                                                                            <span
+                                                                                                                class="testi-date-text">Experience
+                                                                                                                shared
+                                                                                                                in July
+                                                                                                                2026</span>
+                                                                                                            <button
+                                                                                                                type="button"
+                                                                                                                class="helpful-btn-pill"
+                                                                                                                data-id="meera-siddharth">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-thumbs-up"></i>
+                                                                                                                Helpful
+                                                                                                                ( <span
+                                                                                                                    class="helpful-num">29</span>
+                                                                                                                )
+                                                                                                            </button>
+                                                                                                        </div>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </article>
+
+                                                                                            <!-- ==================== SLIDE 4 ==================== -->
                                                                                             <article
-                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12  pbmit-even pbmit-col-even">
+                                                                                                class="pbmit-ele pbmit-ele-testimonial pbmit-testimonial-style-4 col-md-12">
                                                                                                 <div
                                                                                                     class="pbminfotech-post-item">
                                                                                                     <div
-                                                                                                        class="pbmit-box-content-wrap">
+                                                                                                        class="custom-testimonial-inner">
+
                                                                                                         <div
-                                                                                                            class="pbminfotech-box-star-ratings">
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                            <i class="fa-solid fa-star pbmit-active"
-                                                                                                                aria-hidden="true"></i>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-desc">
-                                                                                                            <blockquote
-                                                                                                                class="pbminfotech-testimonial-text">
-                                                                                                                <p>Their
-                                                                                                                    team
-                                                                                                                    are
-                                                                                                                    easy
-                                                                                                                    to
-                                                                                                                    work
-                                                                                                                    with
-                                                                                                                    and
-                                                                                                                    helped
-                                                                                                                    me
-                                                                                                                    make
-                                                                                                                    amazing
-                                                                                                                    websites
-                                                                                                                    in a
-                                                                                                                    short
-                                                                                                                    amount
-                                                                                                                    of
-                                                                                                                    time.
-                                                                                                                    Thanks
-                                                                                                                    guys
-                                                                                                                    for
-                                                                                                                    all
-                                                                                                                    your
-                                                                                                                    hard
-                                                                                                                    work.
-                                                                                                                    Trust
-                                                                                                                    us
-                                                                                                                    we
-                                                                                                                    looked
-                                                                                                                    for
-                                                                                                                    a
-                                                                                                                    very
-                                                                                                                    long
-                                                                                                                    time.
-                                                                                                                </p>
-                                                                                                            </blockquote>
-                                                                                                        </div>
-                                                                                                        <div
-                                                                                                            class="pbminfotech-box-author d-flex align-items-center">
+                                                                                                            class="testi-header">
                                                                                                             <div
-                                                                                                                class="pbminfotech-box-img">
-                                                                                                                <div
-                                                                                                                    class="pbmit-featured-img-wrapper">
-                                                                                                                    <div
-                                                                                                                        class="pbmit-featured-wrapper">
-                                                                                                                        <img loading="lazy"
-                                                                                                                            decoding="async"
-                                                                                                                            width="400"
-                                                                                                                            height="400"
-                                                                                                                            src="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-03.jpg"
-                                                                                                                            class="attachment-pbmit-img-500x500 size-pbmit-img-500x500 wp-post-image"
-                                                                                                                            alt=""
-                                                                                                                            srcset="/assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-03.jpg 400w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-03-150x150.jpg 150w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-03-300x300.jpg 300w, /assets/vendor/xinterio-demo.pbminfotech.com/demo4/wp-content/uploads/sites/10/2024/05/reviewer-03-100x100.jpg 100w"
-                                                                                                                            sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                                                    </div>
-                                                                                                                </div>
+                                                                                                                class="testi-avatar-circle">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-user"></i>
                                                                                                             </div>
                                                                                                             <div
-                                                                                                                class="pbmit-auther-content">
+                                                                                                                class="testi-profile-info">
                                                                                                                 <h3
-                                                                                                                    class="pbminfotech-box-title">
-                                                                                                                    Robert
-                                                                                                                    Gold
+                                                                                                                    class="testi-author-name">
+                                                                                                                    Rohan
+                                                                                                                    &amp;
+                                                                                                                    Pooja
+                                                                                                                    Kapoor
                                                                                                                 </h3>
+                                                                                                                <span
+                                                                                                                    class="testi-badge-verified">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-circle-check"></i>
+                                                                                                                    Verified
+                                                                                                                    Homeowner
+                                                                                                                    &bull;
+                                                                                                                    Villa
+                                                                                                                    Renovation
+                                                                                                                </span>
                                                                                                                 <div
-                                                                                                                    class="pbminfotech-testimonial-detail">
-                                                                                                                    Grorgia,
-                                                                                                                    USA
+                                                                                                                    class="testi-location">
+                                                                                                                    <i
+                                                                                                                        class="fa-solid fa-location-dot"></i>
+                                                                                                                    Rainbow
+                                                                                                                    Drive,
+                                                                                                                    Sarjapur
+                                                                                                                    Road
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-rating-row">
+                                                                                                            <div
+                                                                                                                class="testi-stars">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-star"></i>
+                                                                                                            </div>
+                                                                                                            <span
+                                                                                                                class="testi-score-pill">5.0
+                                                                                                                |
+                                                                                                                End-to-End
+                                                                                                                Project
+                                                                                                                Care</span>
+                                                                                                        </div>
+
+                                                                                                        <h4
+                                                                                                            class="testi-highlight-title">
+                                                                                                            "Turnkey
+                                                                                                            interior
+                                                                                                            transformation
+                                                                                                            handled with
+                                                                                                            daily
+                                                                                                            WhatsApp
+                                                                                                            logs."</h4>
+
+                                                                                                        <p
+                                                                                                            class="testi-review-body">
+                                                                                                            Renovating
+                                                                                                            an older
+                                                                                                            villa can be
+                                                                                                            demanding,
+                                                                                                            but our
+                                                                                                            assigned
+                                                                                                            project
+                                                                                                            supervisor
+                                                                                                            sent daily
+                                                                                                            site photo
+                                                                                                            logs and
+                                                                                                            strictly
+                                                                                                            tracked
+                                                                                                            every
+                                                                                                            milestone.
+                                                                                                            From
+                                                                                                            acoustic
+                                                                                                            ceiling
+                                                                                                            trims to the
+                                                                                                            modular
+                                                                                                            pantry
+                                                                                                            units,
+                                                                                                            execution
+                                                                                                            followed our
+                                                                                                            moodboard
+                                                                                                            down to the
+                                                                                                            millimeter.
+                                                                                                        </p>
+
+                                                                                                        <div
+                                                                                                            class="testi-tags-row">
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-clipboard-check"></i>
+                                                                                                                Daily
+                                                                                                                Site
+                                                                                                                Logs</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-handshake"></i>
+                                                                                                                Turnkey
+                                                                                                                Handover</span>
+                                                                                                            <span
+                                                                                                                class="testi-feature-tag"><i
+                                                                                                                    class="fa-solid fa-brush"></i>
+                                                                                                                PU
+                                                                                                                Polish
+                                                                                                                Finishes</span>
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-divider">
+                                                                                                        </div>
+
+                                                                                                        <div
+                                                                                                            class="testi-footer-row">
+                                                                                                            <span
+                                                                                                                class="testi-date-text">Experience
+                                                                                                                shared
+                                                                                                                in June
+                                                                                                                2026</span>
+                                                                                                            <button
+                                                                                                                type="button"
+                                                                                                                class="helpful-btn-pill"
+                                                                                                                data-id="rohan-pooja">
+                                                                                                                <i
+                                                                                                                    class="fa-solid fa-thumbs-up"></i>
+                                                                                                                Helpful
+                                                                                                                ( <span
+                                                                                                                    class="helpful-num">51</span>
+                                                                                                                )
+                                                                                                            </button>
+                                                                                                        </div>
+
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </article>

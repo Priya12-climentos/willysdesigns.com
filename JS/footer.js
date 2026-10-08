@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    /* Global floating WhatsApp button */
+    (function () {
+        if (document.querySelector(".wa-float")) return;   // never add twice
+
+        const WHATSAPP_NUMBER = "916360353223";             // country code + number, no + or spaces
+        const WHATSAPP_MESSAGE = "Hi, I'd like to know more about your interior design services.";
+
+        const link = document.createElement("a");
+        link.className = "wa-float";
+        link.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(WHATSAPP_MESSAGE);
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.setAttribute("aria-label", "Chat with us on WhatsApp");
+        link.innerHTML = '<i class="fa-brands fa-whatsapp"></i>';
+        document.body.appendChild(link);
+    })();
 
     const footerContainer = document.getElementById("footer-placeholder");
 
@@ -159,205 +175,174 @@ document.addEventListener("DOMContentLoaded", function () {
      * Current year
      */
     const currentYear = new Date().getFullYear();
+    const BIG_TEXT = "WILLYS";
 
     /*
      * Footer HTML
      */
-   footerContainer.innerHTML = `<footer id="colophon"
-    class="pbmit-footer-section site-footer pbmit-footer-style-5 pbmit-text-color-white pbmit-bg-color-secondarycolor pbmit-footer-menu-yes pbmit-footer-widget-yes">
+    footerContainer.innerHTML = `
+<footer id="colophon" class="pbmit-footer-section site-footer pbmit-footer-style-5 pbmit-text-color-white pbmit-bg-color-secondarycolor pbmit-footer-menu-yes pbmit-footer-widget-yes">
+  <div class="pbmit-widget-copyright-wrap">
 
-    <div class="pbmit-widget-copyright-wrap">
-
-        <!-- Main Footer -->
-        <div class="pbmit-footer-section footer-wrap pbmit-footer-widget-area">
-            <div class="container">
-                <div class="row">
-
-                    <!-- Logo & Description -->
-                    <div class="pbmit-footer-widget pbmit-footer-widget-col-1 col-md-4">
-                        <aside class="widget widget_text">
-                            <div class="textwidget">
-
-                                <a href="https://tos.climentos.com/index.html">
-                                    <img src="/assets/img/main/image.png"
-                                         alt="Climentos Logo"
-                                         style="width:150px;height:auto;margin-bottom:20px;">
-                                </a>
-
-                                <p>
-                                    Turn your coding skills into AI expertise.
-                                    Learn, build, and launch real AI projects
-                                    with expert mentors in just 120 days.
-                                </p>
-
-                            </div>
-                        </aside>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="pbmit-footer-widget pbmit-footer-widget-col-2 col-md-2">
-                        <aside class="widget">
-                            <h5 class="#">Quick Links</h5>
-
-                            <ul class="menu">
-                                <li>
-                                    <a href="/index.html">Home</a>
-                                </li>
-
-                                <li>
-                                    <a href="/pages/about-us.html">About Us</a>
-                                </li>
-
-                                <li>
-                                    <a href="/pages/services.html">Services</a>
-                                </li>
-
-                                <li>
-                                    <a href="/pages/portfolio.html">Portfolio</a>
-                                </li>
-
-                                <li>
-                                    <a href="/pages/placements.html">Placements</a>
-                                </li>
-
-                                <li>
-                                    <a href="/pages/contactUs.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </aside>
-                    </div>
-
-                    <!-- Courses -->
-                    <div class="pbmit-footer-widget pbmit-footer-widget-col-3 col-md-3">
-                        <aside class="widget">
-                            <h5 class="#">Courses</h5>
-
-                            <ul class="menu">
-                                <li>
-                                    <a href="https://tos.climentos.com/pages/course-details.html?c=java">
-                                        Java + AI
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://tos.climentos.com/pages/course-details.html?c=python">
-                                        Python + AI
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://tos.climentos.com/pages/course-details.html?c=data">
-                                        Digital Marketing
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://tos.climentos.com/pages/course-details.html?c=data">
-                                        Clinical Research Specialist
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="https://tos.climentos.com/pages/courses.html">
-                                        All Courses
-                                    </a>
-                                </li>
-                            </ul>
-                        </aside>
-                    </div>
-
-                    <!-- Contact / Stay in loop -->
-                    <div class="pbmit-footer-widget pbmit-footer-widget-col-4 col-md-3">
-                        <aside class="widget">
-                            <h5 class="#">Stay in the Loop</h5>
-
-                            <p>
-                                Placement drives, free workshops and hiring news
-                                — once a week, no spam.
-                            </p>
-
-                            <p>
-                                <i class="fa-solid fa-phone"></i>
-                                <a href="tel:+919741739223">
-                                    +91 97417 39223
-                                </a>
-                            </p>
-
-                            <p>
-                                <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:support@climentos.com">
-                                    support@climentos.com
-                                </a>
-                            </p>
-
-                        </aside>
-                    </div>
-
-                </div>
-            </div>
+    <!-- CTA strip -->
+    <div class="footer-cta">
+      <div class="container">
+        <div class="footer-cta__inner">
+          <div>
+            <h3>Let's design a space you'll love coming home to</h3>
+            <p>Book a free consultation with our design team.</p>
+          </div>
+          <a href="/pages/contactUs.html" class="footer-cta__btn">
+            Book a Consultation <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
-
-        <!-- Copyright -->
-        <div class="pbmit-footer-section pbmit-bg-color-custom">
-            <div class="container">
-                <div class="pbmit-footer-text-area-wrapper pbmit-footer-text-area">
-
-                    <div class="pbmit-footer-text-inner">
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="pbmit-footer-copyright-text-area">
-                                    Copyright © ${new Date().getFullYear()}
-                                    <a href="https://tos.climentos.com/index.html">
-                                        Climentos Technologies Pvt Ltd
-                                    </a>
-                                    All Rights Reserved.
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="pbmit-footer-menu-area">
-                                    <div class="menu-footer-menu-container">
-                                        <ul class="pbmit-footer-menu">
-
-                                            <li class="menu-item">
-                                                <a href="#">
-                                                    Terms and Conditions
-                                                </a>
-                                            </li>
-
-                                            <li class="menu-item">
-                                                <a href="#">
-                                                    Privacy Policy
-                                                </a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+      </div>
     </div>
 
-    <!-- Big Footer Title -->
-    <div class="pbmit-footer-section pbmit-footer-big-area-wrapper">
-        <div class="container">
+    <!-- Main footer -->
+    <div class="pbmit-footer-section footer-wrap pbmit-footer-widget-area">
+      <div class="container">
+        <div class="row">
+
+          <div class="pbmit-footer-widget pbmit-footer-widget-col-1 col-md-4">
+            <aside class="widget widget_text">
+              <div class="textwidget">
+                <a href="/index.html">
+                  <img src="/assets/img/main/image.png" alt="William Designs logo"
+                       style="width:150px;height:auto;margin-bottom:20px;">
+                </a>
+                <p>We craft thoughtful, livable interiors for homes and workspaces, from
+                   concept and 3D layouts to furniture, decor and final handover.</p>
+                <div class="footer-social">
+                  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                  <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="pbmit-footer-widget pbmit-footer-widget-col-2 col-md-2">
+            <aside class="widget">
+              <h5>Quick Links</h5>
+              <ul class="menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about-us.html">About Us</a></li>
+                <li><a href="/pages/services.html">Services</a></li>
+                <li><a href="/pages/portfolio.html">Our Projects</a></li>
+                <li><a href="/pages/contactUs.html">Contact Us</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="pbmit-footer-widget pbmit-footer-widget-col-3 col-md-3">
+            <aside class="widget">
+              <h5>Our Services</h5>
+              <ul class="menu">
+                <li><a href="/pages/services.html">Residential Interiors</a></li>
+                <li><a href="/pages/services.html">Modular Kitchens</a></li>
+                <li><a href="/pages/services.html">Furniture &amp; Decor</a></li>
+                <li><a href="/pages/services.html">2D / 3D Layouts</a></li>
+                <li><a href="/pages/services.html">Commercial Interiors</a></li>
+              </ul>
+            </aside>
+          </div>
+
+          <div class="pbmit-footer-widget pbmit-footer-widget-col-4 col-md-3">
+            <aside class="widget">
+              <h5>Visit Our Studio</h5>
+              <p><i class="fa-solid fa-location-dot"></i> Your street, City, State</p>
+              <p><i class="fa-solid fa-phone"></i> <a href="tel:+910000000000">+91 00000 00000</a></p>
+              <p><i class="fa-solid fa-envelope"></i> <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+              <p><i class="fa-solid fa-clock"></i> Mon - Sat, 10:00 AM - 7:00 PM</p>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright bar -->
+    <div class="pbmit-footer-section pbmit-bg-color-custom">
+      <div class="container">
+        <div class="pbmit-footer-text-area-wrapper pbmit-footer-text-area">
+          <div class="pbmit-footer-text-inner">
             <div class="row">
-                <div class="col-sm-12 pbmit-footer-big-title">
-                    <h3 class="pbmit-footer-title-big">
-                        willys
-                    </h3>
+              <div class="col-md-7">
+                <div class="pbmit-footer-copyright-text-area">
+                  &copy; ${currentYear} William Designs. All Rights Reserved.
+                  <span class="footer-credit">
+                    Designed &amp; developed by
+                    <a href="https://www.climentos.com/" target="_blank" rel="noopener">Climentos Technologies</a>
+                  </span>
                 </div>
+              </div>
+              <div class="col-md-5">
+                <div class="pbmit-footer-menu-area">
+                  <ul class="pbmit-footer-menu">
+                    <li class="menu-item"><a href="#">Terms and Conditions</a></li>
+                    <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 
+  <!-- Big wordmark -->
+  <div class="pbmit-footer-section pbmit-footer-big-area-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 pbmit-footer-big-title">
+<h3 class="pbmit-footer-title-big" aria-hidden="true">${BIG_TEXT}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>`;
+    /* Auto-fit the big footer word to the available width */
+    /* Auto-fit the big footer word to the available width */
+    (function () {
+        const title = footerContainer.querySelector(".pbmit-footer-title-big");
+        if (!title) return;
+        const box = title.parentElement;
+        const MAX = 260;   // biggest allowed size (px)
+        const MIN = 32;    // smallest allowed size (px)
+
+        function textWidth() {
+            const range = document.createRange();
+            range.selectNodeContents(title);
+            return range.getBoundingClientRect().width;   // real text width, ignores box limits
+        }
+
+        function fit() {
+            const cs = getComputedStyle(box);
+            const avail = box.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+            if (avail <= 0) return;
+
+            title.style.setProperty("white-space", "nowrap", "important");
+            title.style.setProperty("font-size", "100px", "important");
+
+            const natural = textWidth();                  // text width at 100px
+            if (!natural) return;
+
+            let size = Math.floor(100 * avail / natural * 0.98);   // 2% safety margin
+
+            if (size < MIN) {
+                size = MIN;
+                title.style.setProperty("white-space", "normal", "important");
+            }
+            size = Math.min(size, MAX);
+            title.style.setProperty("font-size", size + "px", "important");
+        }
+
+        fit();
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+        window.addEventListener("load", fit);
+        new ResizeObserver(fit).observe(box);
+    })();
 });
